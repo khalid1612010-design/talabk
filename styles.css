@@ -162,6 +162,22 @@ h2 {
     color: var(--primary-color);
 }
 
+.lang-select {
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+
+.lang-select:focus {
+    border-color: var(--primary-color);
+}
+
 /* Hero Section */
 .hero {
     padding: 8rem 0 4rem;
@@ -305,6 +321,10 @@ h2 {
 .feature-list {
     text-align: right;
     margin-top: 1rem;
+}
+
+html[dir="ltr"] .feature-list {
+    text-align: left;
 }
 
 .feature-list li {

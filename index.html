@@ -16,16 +16,23 @@
             <a href="#" class="logo"><span>طلابك</span></a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#features">المميزات</a></li>
-                    <li><a href="#languages">اللغات</a></li>
-                    <li><a href="#portfolio">أعمالنا</a></li>
+                    <li><a href="#features" data-i18n="nav_features">المميزات</a></li>
+                    <li><a href="#languages" data-i18n="nav_languages">اللغات</a></li>
+                    <li><a href="#portfolio" data-i18n="nav_portfolio">أعمالنا</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
+                <select id="language-select" class="lang-select" aria-label="اختر اللغة">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                </select>
                 <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع">
                     <i class="fas fa-moon"></i>
                 </button>
-                <a href="https://wa.me/01550527744" class="btn btn-primary nav-cta"><i class="fab fa-whatsapp"></i> تواصل معنا</a>
+                <a href="https://wa.me/01550527744" class="btn btn-primary nav-cta"><i class="fab fa-whatsapp"></i> <span data-i18n="contact_us">تواصل معنا</span></a>
             </div>
         </div>
     </header>
@@ -34,11 +41,11 @@
     <section class="hero" id="home">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 class="fade-up">ارتقِ بخدماتك التعليمية مع <span>طلابك</span></h1>
-                <p class="fade-up delay-1">الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الكورسات، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور.</p>
+                <h1 class="fade-up"><span data-i18n="hero_title_1">ارتقِ بخدماتك التعليمية مع</span> <span>طلابك</span></h1>
+                <p class="fade-up delay-1" data-i18n="hero_desc">الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الكورسات، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور.</p>
                 <div class="hero-buttons fade-up delay-2">
-                    <a href="https://wa.me/01550527744" class="btn btn-primary btn-large"><i class="fab fa-whatsapp"></i> ابدأ الآن</a>
-                    <a href="#features" class="btn btn-outline btn-large">اكتشف المزيد</a>
+                    <a href="https://wa.me/01550527744" class="btn btn-primary btn-large"><i class="fab fa-whatsapp"></i> <span data-i18n="start_now">ابدأ الآن</span></a>
+                    <a href="#features" class="btn btn-outline btn-large" data-i18n="discover_more">اكتشف المزيد</a>
                 </div>
             </div>
             <div class="hero-image fade-in delay-3">
@@ -66,29 +73,29 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-title text-center fade-up">
-                <h2>لماذا تختار منصة طلابك؟</h2>
-                <p>صُممت لتلبي احتياجات المعلمين والأكاديميات بخدمات راقية (High-Ticket)</p>
+                <h2 data-i18n="features_title">لماذا تختار منصة طلابك؟</h2>
+                <p data-i18n="features_subtitle">صُممت لتلبي احتياجات المعلمين والأكاديميات بخدمات راقية (High-Ticket)</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card fade-up">
                     <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h3>للمدرسين</h3>
-                    <p>اعرض خبراتك بطريقة احترافية، قم بزيادة عدد طلابك بسهولة، وتواصل مع أولياء الأمور بثقة وفعالية لتعزيز مكانتك التعليمية.</p>
+                    <h3 data-i18n="feat_teachers">للمدرسين</h3>
+                    <p data-i18n="feat_teachers_desc">اعرض خبراتك بطريقة احترافية، قم بزيادة عدد طلابك بسهولة، وتواصل مع أولياء الأمور بثقة وفعالية لتعزيز مكانتك التعليمية.</p>
                 </div>
                 <div class="feature-card fade-up delay-1">
                     <div class="feature-icon"><i class="fas fa-university"></i></div>
-                    <h3>للأكاديميات</h3>
-                    <p>نظم كورساتك وإدارة المدرسين والطلاب في مكان واحد بطريقة احترافية ومؤتمتة ترفع من كفاءة العمل وتوفر الوقت.</p>
+                    <h3 data-i18n="feat_academies">للأكاديميات</h3>
+                    <p data-i18n="feat_academies_desc">نظم كورساتك وإدارة المدرسين والطلاب في مكان واحد بطريقة احترافية ومؤتمتة ترفع من كفاءة العمل وتوفر الوقت.</p>
                 </div>
                 <div class="feature-card fade-up delay-2">
                     <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>مزايا استثنائية</h3>
+                    <h3 data-i18n="feat_advantages">مزايا استثنائية</h3>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> زيادة عدد الطلاب بسهولة</li>
-                        <li><i class="fas fa-check-circle"></i> تنظيم العمل والكورسات</li>
-                        <li><i class="fas fa-check-circle"></i> عرض احترافي يجذب العملاء</li>
-                        <li><i class="fas fa-check-circle"></i> حل مشاكل التواصل التقليدية</li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_1">زيادة عدد الطلاب بسهولة</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_2">تنظيم العمل والكورسات</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_3">عرض احترافي يجذب العملاء</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_4">حل مشاكل التواصل التقليدية</span></li>
                     </ul>
                 </div>
             </div>
@@ -99,14 +106,14 @@
     <section class="languages" id="languages">
         <div class="container">
             <div class="languages-content fade-up">
-                <h2>دعم متعدد اللغات لجمهور عالمي</h2>
-                <p>نحن نقوم ببناء مواقع تدعم لغات متعددة لتتمكن من استهداف الطلاب وأولياء الأمور من مختلف أنحاء العالم. نقوم بالبرمجة والتصميم باللغات التالية:</p>
+                <h2 data-i18n="lang_title">دعم متعدد اللغات لجمهور عالمي</h2>
+                <p data-i18n="lang_desc">نحن نقوم ببناء مواقع تدعم لغات متعددة لتتمكن من استهداف الطلاب وأولياء الأمور من مختلف أنحاء العالم. نقوم بالبرمجة والتصميم باللغات التالية:</p>
                 <div class="lang-tags">
-                    <span class="lang-tag"><i class="fas fa-globe"></i> العربية</span>
-                    <span class="lang-tag"><i class="fas fa-globe"></i> الإنجليزية</span>
-                    <span class="lang-tag"><i class="fas fa-globe"></i> الإسبانية</span>
-                    <span class="lang-tag"><i class="fas fa-globe"></i> الفرنسية</span>
-                    <span class="lang-tag"><i class="fas fa-globe"></i> الألمانية</span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_ar">العربية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_en">الإنجليزية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_es">الإسبانية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_fr">الفرنسية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_de">الألمانية</span></span>
                 </div>
             </div>
         </div>
@@ -116,8 +123,8 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-title text-center fade-up">
-                <h2>قصص نجاح عملائنا</h2>
-                <p>شاهد كيف ساعدنا المدرسين والأكاديميات في تحقيق أهدافهم</p>
+                <h2 data-i18n="port_title">قصص نجاح عملائنا</h2>
+                <p data-i18n="port_desc">شاهد كيف ساعدنا المدرسين والأكاديميات في تحقيق أهدافهم</p>
             </div>
 
             <div class="portfolio-grid">
@@ -129,16 +136,16 @@
                     </div>
                     <div class="portfolio-body">
                         <div class="case-item">
-                            <h4><i class="fas fa-exclamation-triangle"></i> التحدي:</h4>
-                            <p>صعوبة شديدة في عرض الخبرة الكبيرة لاولياء امور بلغة اجنبية (الالمانية)</p>
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case1_challenge">صعوبة شديدة في عرض الخبرة الكبيرة لأولياء أمور بلغة أجنبية (الألمانية)</p>
                         </div>
                         <div class="case-item">
-                            <h4><i class="fas fa-lightbulb"></i> الحل:</h4>
-                            <p>موقع احترافي و منظم يدعم ثلاث لغات مختلفة و هي الالمانية و الانجليزية و العربية</p>
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case1_solution">موقع احترافي ومنظم يدعم ثلاث لغات مختلفة وهي الألمانية والإنجليزية والعربية</p>
                         </div>
                         <div class="case-item success">
-                            <h4><i class="fas fa-star"></i> النتيجة:</h4>
-                            <p>زيادة الثقة من اولياء الامور و سهولة التواصل مع الطلاب</p>
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case1_result">زيادة الثقة من أولياء الأمور وسهولة التواصل مع الطلاب</p>
                         </div>
                     </div>
                 </div>
@@ -151,16 +158,16 @@
                     </div>
                     <div class="portfolio-body">
                         <div class="case-item">
-                            <h4><i class="fas fa-exclamation-triangle"></i> التحدي:</h4>
-                            <p>صعوبة في عرض الخبرة الكبيرة و الوصول لاكادميات كبيرة رغم وجود الخبرة المطلوبة</p>
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case2_challenge">صعوبة في عرض الخبرة الكبيرة والوصول لأكاديميات كبيرة رغم وجود الخبرة المطلوبة</p>
                         </div>
                         <div class="case-item">
-                            <h4><i class="fas fa-lightbulb"></i> الحل:</h4>
-                            <p>موقع متكامل لعرض الخبرة الكبيرة للمعلمة و تصميم احترافي ومميز</p>
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case2_solution">موقع متكامل لعرض الخبرة الكبيرة للمعلمة وتصميم احترافي ومميز</p>
                         </div>
                         <div class="case-item success">
-                            <h4><i class="fas fa-star"></i> النتيجة:</h4>
-                            <p>زيادة ملحوظة في فرص الوصول لاكاديميات عالية و زيادة الثقة من اولياء الأمور</p>
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case2_result">زيادة ملحوظة في فرص الوصول لأكاديميات عالية وزيادة الثقة من أولياء الأمور</p>
                         </div>
                     </div>
                 </div>
@@ -173,16 +180,16 @@
                     </div>
                     <div class="portfolio-body">
                         <div class="case-item">
-                            <h4><i class="fas fa-exclamation-triangle"></i> التحدي:</h4>
-                            <p>تشتت في إدارة الكورسات وعدم وجود منصة موحدة للطلاب والمعلمين</p>
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case3_challenge">تشتت في إدارة الكورسات وعدم وجود منصة موحدة للطلاب والمعلمين</p>
                         </div>
                         <div class="case-item">
-                            <h4><i class="fas fa-lightbulb"></i> الحل:</h4>
-                            <p>بناء منصة أكاديمية شاملة ومنظمة لعرض الكورسات وتسهيل الانضمام</p>
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case3_solution">بناء منصة أكاديمية شاملة ومنظمة لعرض الكورسات وتسهيل الانضمام</p>
                         </div>
                         <div class="case-item success">
-                            <h4><i class="fas fa-star"></i> النتيجة:</h4>
-                            <p>تنظيم احترافي للمحتوى التعليمي وتجربة مستخدم ممتازة زادت من معدلات التسجيل</p>
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case3_result">تنظيم احترافي للمحتوى التعليمي وتجربة مستخدم ممتازة زادت من معدلات التسجيل</p>
                         </div>
                     </div>
                 </div>
@@ -193,10 +200,10 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container text-center fade-up">
-            <h2>هل أنت مستعد لتطوير عملك التعليمي؟</h2>
-            <p>انضم إلى نخبة المدرسين والأكاديميات الذين حققوا نقلة نوعية في أعمالهم معنا.</p>
+            <h2 data-i18n="cta_title">هل أنت مستعد لتطوير عملك التعليمي؟</h2>
+            <p data-i18n="cta_desc">انضم إلى نخبة المدرسين والأكاديميات الذين حققوا نقلة نوعية في أعمالهم معنا.</p>
             <a href="https://wa.me/01550527744" class="btn btn-primary btn-large pulse-animation">
-                <i class="fab fa-whatsapp"></i> تواصل معنا الآن
+                <i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">تواصل معنا الآن</span>
                 <br>
                 <small dir="ltr">01550527744</small>
             </a>
@@ -208,14 +215,14 @@
         <div class="container footer-content">
             <div class="footer-logo">
                 <h2>طلابك</h2>
-                <p>الحل الكامل لنجاحك أونلاين</p>
+                <p data-i18n="footer_desc">الحل الكامل لنجاحك أونلاين</p>
             </div>
             <div class="footer-social">
                 <a href="https://wa.me/01550527744"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 طلابك. جميع الحقوق محفوظة.</p>
+            <p data-i18n="footer_rights">&copy; 2026 طلابك. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
