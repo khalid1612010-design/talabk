@@ -44,7 +44,9 @@ const translations = {
         cta_desc: "انضم إلى نخبة المدرسين والأكاديميات الذين حققوا نقلة نوعية في أعمالهم معنا.",
         cta_btn: "تواصل معنا الآن",
         footer_desc: "الحل الكامل لنجاحك أونلاين",
-        footer_rights: "© 2026 طلابك. جميع الحقوق محفوظة."
+        footer_rights: "© 2026 طلابك. جميع الحقوق محفوظة.",
+        order_pkg: "الاشتراك/ الاستفسار عن الباقة",
+        contact_to_discuss: "الاشتراك/ الاستفسار عن الباقة"
     },
     en: {
         nav_features: "Features",
@@ -91,7 +93,9 @@ const translations = {
         cta_desc: "Join the elite group of teachers and academies who have made a quantum leap in their business with us.",
         cta_btn: "Contact us now",
         footer_desc: "The complete solution for your online success",
-        footer_rights: "© 2026 Talabk. All rights reserved."
+        footer_rights: "© 2026 Talabk. All rights reserved.",
+        order_pkg: "Subscribe / Inquire about Package",
+        contact_to_discuss: "Subscribe / Inquire about Package"
     },
     es: {
         nav_features: "Características",
@@ -138,7 +142,9 @@ const translations = {
         cta_desc: "Únete al grupo de élite de profesores y academias que han dado un salto cuántico en su negocio con nosotros.",
         cta_btn: "Contáctanos ahora",
         footer_desc: "La solución completa para tu éxito en línea",
-        footer_rights: "© 2026 Talabk. Todos los derechos reservados."
+        footer_rights: "© 2026 Talabk. Todos los derechos reservados.",
+        order_pkg: "Suscribirse / Consultar sobre el Paquete",
+        contact_to_discuss: "Suscribirse / Consultar sobre el Paquete"
     },
     de: {
         nav_features: "Funktionen",
@@ -185,7 +191,9 @@ const translations = {
         cta_desc: "Schließen Sie sich der Elitegruppe von Lehrern und Akademien an, die mit uns einen Quantensprung in ihrem Geschäft gemacht haben.",
         cta_btn: "Kontaktieren Sie uns jetzt",
         footer_desc: "Die Komplettlösung für Ihren Online-Erfolg",
-        footer_rights: "© 2026 Talabk. Alle Rechte vorbehalten."
+        footer_rights: "© 2026 Talabk. Alle Rechte vorbehalten.",
+        order_pkg: "Abonnieren / Über das Paket anfragen",
+        contact_to_discuss: "Abonnieren / Über das Paket anfragen"
     },
     fr: {
         nav_features: "Fonctionnalités",
@@ -232,7 +240,9 @@ const translations = {
         cta_desc: "Rejoignez le groupe d'élite des enseignants et des académies qui ont fait un bond en avant dans leur entreprise avec nous.",
         cta_btn: "Contactez-nous maintenant",
         footer_desc: "La solution complète pour votre succès en ligne",
-        footer_rights: "© 2026 Talabk. Tous droits réservés."
+        footer_rights: "© 2026 Talabk. Tous droits réservés.",
+        order_pkg: "S'abonner / Se renseigner sur le forfait",
+        contact_to_discuss: "S'abonner / Se renseigner sur le forfait"
     }
 };
 

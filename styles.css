@@ -378,6 +378,165 @@ html[dir="ltr"] .feature-list {
     transform: scale(1.05);
 }
 
+/* Pricing Section */
+.pricing {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.pricing-card.popular {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.2);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-color), #D97706);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pricing-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pricing-features {
+    text-align: right;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+html[dir="ltr"] .pricing-features {
+    text-align: left;
+}
+
+.pricing-features li {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.pricing-features i {
+    color: var(--success-color);
+    font-size: 0.9rem;
+}
+
+.pricing-price {
+    margin-bottom: 2rem;
+}
+
+.pricing-price span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price h4 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+.pricing-price h4 span {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin: 0;
+    display: inline;
+}
+
+.pricing-btn {
+    width: 100%;
+}
+
+/* Custom Package */
+.pricing-custom {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(129, 140, 248, 0.1));
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.pricing-custom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pricing-custom-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.pricing-custom-info p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-custom-note {
+    font-size: 1.1rem;
+    color: var(--text-main) !important;
+}
+
+@media (max-width: 768px) {
+    .pricing-custom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Portfolio / Case Studies */
 .portfolio {
     padding: 5rem 0;
