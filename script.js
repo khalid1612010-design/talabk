@@ -20,7 +20,7 @@ const translations = {
         adv_3: "عرض احترافي يجذب العملاء",
         adv_4: "حل مشاكل التواصل التقليدية",
         lang_title: "دعم متعدد اللغات لجمهور عالمي",
-        lang_desc: "نحن نقوم ببناء مواقع تدعم لغات متعددة لتتمكن من استهداف الطلاب وأولياء الأمور من مختلف أنحاء العالم. نقوم بالبرمجة والتصميم باللغات التالية:",
+        lang_desc: "نحن نقوم ببناء مواقع تدعم لغات متعددة لتتمكن من استهدف الطلاب وأولياء الأمور من مختلف أنحاء العالم. نقوم بالبرمجة والتصميم باللغات التالية:",
         lang_ar: "العربية",
         lang_en: "الإنجليزية",
         lang_es: "الإسبانية",
@@ -46,7 +46,56 @@ const translations = {
         footer_desc: "الحل الكامل لنجاحك أونلاين",
         footer_rights: "© 2026 طلابك. جميع الحقوق محفوظة.",
         order_pkg: "الاشتراك/ الاستفسار عن الباقة",
-        contact_to_discuss: "الاشتراك/ الاستفسار عن الباقة"
+        contact_to_discuss: "الاشتراك/ الاستفسار عن الباقة",
+        
+        // Modal Strings
+        start_project: "ابدأ مشروعك",
+        modal_title: "ابدأ مشروعك التعليمي",
+        modal_pkg_prefix: "الباقة المختارة:",
+        step_label: "الخطوة",
+        step_of: "من",
+        step1_title: "البيانات السريعة",
+        label_name: "الاسم كامل *",
+        label_phone: "رقم واتساب *",
+        label_country: "الدولة *",
+        placeholder_name: "أدخل اسمك الكريم",
+        placeholder_phone: "مثال: 01550527744",
+        placeholder_country: "مثال: مصر",
+        step2_title: "نوع المشروع",
+        opt_teacher: "مدرس",
+        opt_academy: "أكاديمية",
+        opt_online_course: "كورس أونلاين",
+        step3_title: "معلومات المشروع",
+        label_brand: "اسم الأكاديمية / البراند *",
+        placeholder_brand: "مثال: أكاديمية التميز",
+        label_offers: "بتقدم إيه؟ (مواد / كورسات) *",
+        placeholder_offers: "مثال: كورسات لغات، رياضيات للمرحلة الثانوية",
+        label_link: "عندك صفحة أو موقع حالي؟ (لينك اختياري)",
+        step4_title: "الهدف الرئيسي",
+        opt_get_students: "أجيب طلاب",
+        opt_show_courses: "أعرض الكورسات",
+        opt_pro_brand: "براند احترافي",
+        step5_title: "محتاج إيه في الموقع؟",
+        step5_subtitle: "يمكنك اختيار أكثر من خيار",
+        opt_courses_page: "صفحة كورسات",
+        opt_student_reg: "تسجيل طلاب",
+        opt_online_pay: "دفع أونلاين",
+        opt_whatsapp: "واتساب",
+        opt_dashboard: "لوحة تحكم",
+        step6_title: "تحب تبدأ بنفس الباقة ولا تطورها حسب احتياجك؟",
+        opt_same_pkg: "نفس الباقة",
+        opt_same_pkg_desc: "البدء بالميزات المذكورة في الباقة مباشرة",
+        opt_minor_upgrade: "تطوير بسيط",
+        opt_minor_upgrade_desc: "إضافة لمسات خاصة وبعض التعديلات المحددة",
+        opt_full_upgrade: "تطوير كامل",
+        opt_full_upgrade_desc: "بناء ميزات مخصصة إضافية بالكامل لتناسب عملك",
+        step7_title: "وقت التنفيذ المناسب لك",
+        opt_now: "عايزه فورًا",
+        opt_week: "خلال أسبوع",
+        opt_thinking: "لسه بفكر",
+        btn_prev: "السابق",
+        btn_next: "التالي",
+        btn_whatsapp: "كمل على واتساب"
     },
     en: {
         nav_features: "Features",
@@ -95,7 +144,56 @@ const translations = {
         footer_desc: "The complete solution for your online success",
         footer_rights: "© 2026 Talabk. All rights reserved.",
         order_pkg: "Subscribe / Inquire about Package",
-        contact_to_discuss: "Subscribe / Inquire about Package"
+        contact_to_discuss: "Subscribe / Inquire about Package",
+        
+        // Modal Strings
+        start_project: "Start Your Project",
+        modal_title: "Start Your Educational Project",
+        modal_pkg_prefix: "Selected Package:",
+        step_label: "Step",
+        step_of: "of",
+        step1_title: "Quick Details",
+        label_name: "Full Name *",
+        label_phone: "WhatsApp Number *",
+        label_country: "Country *",
+        placeholder_name: "Enter your full name",
+        placeholder_phone: "e.g., 01550527744",
+        placeholder_country: "e.g., Egypt",
+        step2_title: "Project Type",
+        opt_teacher: "Teacher",
+        opt_academy: "Academy",
+        opt_online_course: "Online Course",
+        step3_title: "Project Details",
+        label_brand: "Academy / Brand Name *",
+        placeholder_brand: "e.g., Excellence Academy",
+        label_offers: "What do you offer? (Subjects / Courses) *",
+        placeholder_offers: "e.g., Language courses, high school math",
+        label_link: "Do you have a page or website? (Optional Link)",
+        step4_title: "Main Goal",
+        opt_get_students: "Get Students",
+        opt_show_courses: "Showcase Courses",
+        opt_pro_brand: "Professional Brand",
+        step5_title: "What do you need in the website?",
+        step5_subtitle: "You can select multiple options",
+        opt_courses_page: "Courses Page",
+        opt_student_reg: "Student Registration",
+        opt_online_pay: "Online Payment",
+        opt_whatsapp: "WhatsApp",
+        opt_dashboard: "Dashboard",
+        step6_title: "Would you like to start with the same package or customize/upgrade it?",
+        opt_same_pkg: "Same Package",
+        opt_same_pkg_desc: "Start with the features mentioned in the package directly",
+        opt_minor_upgrade: "Minor Customization",
+        opt_minor_upgrade_desc: "Add special touches and specific modifications",
+        opt_full_upgrade: "Full Upgrade",
+        opt_full_upgrade_desc: "Build fully customized extra features to suit your business",
+        step7_title: "Suitable Execution Timeline",
+        opt_now: "Immediately",
+        opt_week: "Within a week",
+        opt_thinking: "Still thinking",
+        btn_prev: "Previous",
+        btn_next: "Next",
+        btn_whatsapp: "Continue on WhatsApp"
     },
     es: {
         nav_features: "Características",
@@ -144,7 +242,56 @@ const translations = {
         footer_desc: "La solución completa para tu éxito en línea",
         footer_rights: "© 2026 Talabk. Todos los derechos reservados.",
         order_pkg: "Suscribirse / Consultar sobre el Paquete",
-        contact_to_discuss: "Suscribirse / Consultar sobre el Paquete"
+        contact_to_discuss: "Suscribirse / Consultar sobre el Paquete",
+        
+        // Modal Strings
+        start_project: "Iniciar Proyecto",
+        modal_title: "Comience su Proyecto Educativo",
+        modal_pkg_prefix: "Paquete Seleccionado:",
+        step_label: "Paso",
+        step_of: "de",
+        step1_title: "Datos Rápidos",
+        label_name: "Nombre Completo *",
+        label_phone: "Número de WhatsApp *",
+        label_country: "País *",
+        placeholder_name: "Ingrese su nombre completo",
+        placeholder_phone: "ej., +34 600 000 000",
+        placeholder_country: "ej., España",
+        step2_title: "Tipo de Proyecto",
+        opt_teacher: "Profesor",
+        opt_academy: "Academia",
+        opt_online_course: "Curso en Línea",
+        step3_title: "Detalles del Proyecto",
+        label_brand: "Nombre de la Academia / Marca *",
+        placeholder_brand: "ej., Academia Excelencia",
+        label_offers: "¿Qué ofrece? (Asignaturas / Cursos) *",
+        placeholder_offers: "ej., Cursos de idiomas, matemáticas",
+        label_link: "¿Tiene una página o sitio web? (Enlace Opcional)",
+        step4_title: "Objetivo Principal",
+        opt_get_students: "Conseguir Estudiantes",
+        opt_show_courses: "Mostrar Cursos",
+        opt_pro_brand: "Marca Profesional",
+        step5_title: "¿Qué necesita en el sitio web?",
+        step5_subtitle: "Puede seleccionar múltiples opciones",
+        opt_courses_page: "Página de Cursos",
+        opt_student_reg: "Registro de Estudiantes",
+        opt_online_pay: "Pago en Línea",
+        opt_whatsapp: "WhatsApp",
+        opt_dashboard: "Panel de Control",
+        step6_title: "¿Desea comenzar con el mismo paquete o personalizarlo?",
+        opt_same_pkg: "Mismo Paquete",
+        opt_same_pkg_desc: "Comenzar con las características del paquete directamente",
+        opt_minor_upgrade: "Personalización Menor",
+        opt_minor_upgrade_desc: "Agregar toques especiales y modificaciones específicas",
+        opt_full_upgrade: "Actualización Completa",
+        opt_full_upgrade_desc: "Construir funciones personalizadas adicionales",
+        step7_title: "Plazo de Ejecución Adecuado",
+        opt_now: "Inmediatamente",
+        opt_week: "Dentro de una semana",
+        opt_thinking: "Aún pensando",
+        btn_prev: "Anterior",
+        btn_next: "Siguiente",
+        btn_whatsapp: "Continuar en WhatsApp"
     },
     de: {
         nav_features: "Funktionen",
@@ -193,7 +340,56 @@ const translations = {
         footer_desc: "Die Komplettlösung für Ihren Online-Erfolg",
         footer_rights: "© 2026 Talabk. Alle Rechte vorbehalten.",
         order_pkg: "Abonnieren / Über das Paket anfragen",
-        contact_to_discuss: "Abonnieren / Über das Paket anfragen"
+        contact_to_discuss: "Abonnieren / Über das Paket anfragen",
+        
+        // Modal Strings
+        start_project: "Projekt starten",
+        modal_title: "Starten Sie Ihr Bildungsprojekt",
+        modal_pkg_prefix: "Ausgewähltes Paket:",
+        step_label: "Schritt",
+        step_of: "von",
+        step1_title: "Schnelle Details",
+        label_name: "Vollständiger Name *",
+        label_phone: "WhatsApp-Nummer *",
+        label_country: "Land *",
+        placeholder_name: "Geben Sie Ihren Namen ein",
+        placeholder_phone: "z.B. +49 170 0000000",
+        placeholder_country: "z.B. Deutschland",
+        step2_title: "Projekttyp",
+        opt_teacher: "Lehrer",
+        opt_academy: "Akademie",
+        opt_online_course: "Online-Kurs",
+        step3_title: "Projektdetails",
+        label_brand: "Name der Akademie / Marke *",
+        placeholder_brand: "z.B. Exzellenz-Akademie",
+        label_offers: "Was bieten Sie an? (Fächer / Kurse) *",
+        placeholder_offers: "z.B. Sprachkurse, Abitur-Mathe",
+        label_link: "Haben Sie eine Seite oder Website? (Optionaler Link)",
+        step4_title: "Hauptziel",
+        opt_get_students: "Schüler gewinnen",
+        opt_show_courses: "Kurse präsentieren",
+        opt_pro_brand: "Professionelle Marke",
+        step5_title: "Was benötigen Sie auf der Website?",
+        step5_subtitle: "Mehrfachauswahl möglich",
+        opt_courses_page: "Kursseite",
+        opt_student_reg: "Schülerregistrierung",
+        opt_online_pay: "Online-Zahlung",
+        opt_whatsapp: "WhatsApp",
+        opt_dashboard: "Dashboard",
+        step6_title: "Möchten Sie mit demselben Paket beginnen oder es anpassen?",
+        opt_same_pkg: "Gleiches Paket",
+        opt_same_pkg_desc: "Direkt mit den Funktionen des Pakets starten",
+        opt_minor_upgrade: "Kleine Anpassung",
+        opt_minor_upgrade_desc: "Besondere Akzente und spezifische Änderungen hinzufügen",
+        opt_full_upgrade: "Vollständiges Upgrade",
+        opt_full_upgrade_desc: "Komplett maßgeschneiderte Zusatzfunktionen erstellen",
+        step7_title: "Geeigneter Zeitrahmen",
+        opt_now: "Sofort",
+        opt_week: "Innerhalb einer Woche",
+        opt_thinking: "Noch am Überlegen",
+        btn_prev: "Zurück",
+        btn_next: "Weiter",
+        btn_whatsapp: "Weiter auf WhatsApp"
     },
     fr: {
         nav_features: "Fonctionnalités",
@@ -242,7 +438,56 @@ const translations = {
         footer_desc: "La solution complète pour votre succès en ligne",
         footer_rights: "© 2026 Talabk. Tous droits réservés.",
         order_pkg: "S'abonner / Se renseigner sur le forfait",
-        contact_to_discuss: "S'abonner / Se renseigner sur le forfait"
+        contact_to_discuss: "S'abonner / Se renseigner sur le forfait",
+        
+        // Modal Strings
+        start_project: "Lancer le Projet",
+        modal_title: "Commencez Votre Projet Éducatif",
+        modal_pkg_prefix: "Forfait Sélectionné:",
+        step_label: "Étape",
+        step_of: "sur",
+        step1_title: "Détails Rapides",
+        label_name: "Nom Complet *",
+        label_phone: "Numéro WhatsApp *",
+        label_country: "Pays *",
+        placeholder_name: "Entrez votre nom complet",
+        placeholder_phone: "ex., +33 6 00 00 00 00",
+        placeholder_country: "ex., France",
+        step2_title: "Type de Projet",
+        opt_teacher: "Enseignant",
+        opt_academy: "Académie",
+        opt_online_course: "Cours en Ligne",
+        step3_title: "Détails du Projet",
+        label_brand: "Nom de l'Académie / Marque *",
+        placeholder_brand: "ex., Académie Excellence",
+        label_offers: "Que proposez-vous? (Matières / Cours) *",
+        placeholder_offers: "ex., Cours de langues, maths",
+        label_link: "Avez-vous une page ou un site? (Lien Optionnel)",
+        step4_title: "Objectif Principal",
+        opt_get_students: "Obtenir des Étudiants",
+        opt_show_courses: "Présenter les Cours",
+        opt_pro_brand: "Marque Professionnelle",
+        step5_title: "Qu'avez-vous besoin sur le site?",
+        step5_subtitle: "Plusieurs choix possibles",
+        opt_courses_page: "Page des Cours",
+        opt_student_reg: "Inscription des Étudiants",
+        opt_online_pay: "Paiement en Ligne",
+        opt_whatsapp: "WhatsApp",
+        opt_dashboard: "Tableau de Bord",
+        step6_title: "Voulez-vous commencer avec le même forfait ou le personnaliser?",
+        opt_same_pkg: "Même Forfait",
+        opt_same_pkg_desc: "Démarrer directement avec les fonctionnalités du forfait",
+        opt_minor_upgrade: "Personnalisation Mineure",
+        opt_minor_upgrade_desc: "Ajouter des touches spéciales et des modifications spécifiques",
+        opt_full_upgrade: "Mise à Niveau Complète",
+        opt_full_upgrade_desc: "Construire des fonctionnalités personnalisées supplémentaires",
+        step7_title: "Calendrier d'Exécution Adapté",
+        opt_now: "Immédiatement",
+        opt_week: "D'ici une semaine",
+        opt_thinking: "Toujours en réflexion",
+        btn_prev: "Précédent",
+        btn_next: "Suivant",
+        btn_whatsapp: "Continuer sur WhatsApp"
     }
 };
 
@@ -297,7 +542,11 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translations[lang][key];
+                } else {
+                    el.textContent = translations[lang][key];
+                }
             }
         });
     };
@@ -358,7 +607,274 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
         } else {
-            navbar.style.boxShadow = 'none';
         }
     });
+
+    // ==========================================
+    // 6. Project Setup Modal & Wizard Form Logic
+    // ==========================================
+    const projectModal = document.getElementById('project-modal');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const startProjectBtns = document.querySelectorAll('.start-project-btn');
+    const selectedPkgSpan = document.getElementById('selected-package-name');
+    const formSteps = document.querySelectorAll('.form-step');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const submitWhatsappBtn = document.getElementById('submit-whatsapp-btn');
+    const formProgressBar = document.getElementById('form-progress');
+    const currentStepNumSpan = document.getElementById('current-step-num');
+    const wizardForm = document.getElementById('project-wizard-form');
+
+    let currentStep = 1;
+    let selectedPackage = 'Pro';
+
+    const updateStepUI = () => {
+        // Toggle active step
+        formSteps.forEach(stepEl => {
+            const stepNum = parseInt(stepEl.getAttribute('data-step'), 10);
+            if (stepNum === currentStep) {
+                stepEl.classList.add('active');
+            } else {
+                stepEl.classList.remove('active');
+            }
+        });
+
+        // Update progress bar
+        const progressPct = (currentStep / 7) * 100;
+        formProgressBar.style.width = `${progressPct}%`;
+        currentStepNumSpan.textContent = currentStep;
+
+        // Navigation button displays
+        if (currentStep === 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'block';
+            submitWhatsappBtn.style.display = 'none';
+        } else if (currentStep === 7) {
+            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'none';
+            submitWhatsappBtn.style.display = 'block';
+        } else {
+            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'block';
+            submitWhatsappBtn.style.display = 'none';
+        }
+
+        // Scroll modal card to top on step change
+        const modalCard = document.querySelector('.modal-card');
+        if (modalCard) modalCard.scrollTop = 0;
+    };
+
+    const validateStep = (step) => {
+        const activeStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+        if (!activeStepEl) return true;
+
+        const requiredInputs = activeStepEl.querySelectorAll('input[required]');
+        let isValid = true;
+
+        requiredInputs.forEach(input => {
+            if (!input.value.trim()) {
+                input.reportValidity();
+                isValid = false;
+                // Add a visual error effect
+                input.style.borderColor = '#EF4444';
+                setTimeout(() => {
+                    input.style.borderColor = '';
+                }, 3000);
+            }
+        });
+
+        return isValid;
+    };
+
+    const openModal = (pkg) => {
+        selectedPackage = pkg;
+        if (selectedPkgSpan) {
+            // Translate package name dynamically if possible, else use raw
+            selectedPkgSpan.textContent = pkg;
+        }
+        
+        currentStep = 1;
+        if (wizardForm) wizardForm.reset();
+        
+        // Uncheck all site features checkboxes
+        const checkboxes = document.querySelectorAll('input[name="site-features"]');
+        checkboxes.forEach(cb => cb.checked = false);
+
+        // Reset radio buttons to defaults (first of each group)
+        const radioGroups = ['project-type', 'project-goal', 'package-upgrade', 'execution-time'];
+        radioGroups.forEach(name => {
+            const firstRadio = document.querySelector(`input[name="${name}"]`);
+            if (firstRadio) firstRadio.checked = true;
+        });
+
+        updateStepUI();
+
+        // Translate the newly opened modal elements for placeholders
+        const currentLang = localStorage.getItem('lang') || 'ar';
+        setLanguage(currentLang);
+
+        if (projectModal) {
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeModal = () => {
+        if (projectModal) {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Attach listeners to pricing buttons
+    startProjectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const pkg = btn.getAttribute('data-package') || 'Pro';
+            openModal(pkg);
+        });
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+
+    // Close modal on clicking backdrop
+    if (projectModal) {
+        projectModal.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Prevent closing when clicking card content
+    const modalCardEl = document.querySelector('.modal-card');
+    if (modalCardEl) {
+        modalCardEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    // Navigation triggers
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (validateStep(currentStep)) {
+                if (currentStep < 7) {
+                    currentStep++;
+                    updateStepUI();
+                }
+            }
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepUI();
+            }
+        });
+    }
+
+    // Submit to WhatsApp Logic
+    if (submitWhatsappBtn) {
+        submitWhatsappBtn.addEventListener('click', () => {
+            if (!validateStep(currentStep)) return;
+
+            // Extract values
+            const name = document.getElementById('client-name').value.trim();
+            const phone = document.getElementById('client-phone').value.trim();
+            const country = document.getElementById('client-country').value.trim();
+            const projectType = document.querySelector('input[name="project-type"]:checked').value;
+            const brandName = document.getElementById('brand-name').value.trim();
+            const brandOffers = document.getElementById('brand-offers').value.trim();
+            const brandLink = document.getElementById('brand-link').value.trim() || 'لا يوجد / None';
+            const goal = document.querySelector('input[name="project-goal"]:checked').value;
+            
+            // Site features checkboxes
+            const siteFeaturesCheckboxes = document.querySelectorAll('input[name="site-features"]:checked');
+            const siteFeatures = Array.from(siteFeaturesCheckboxes).map(cb => cb.value);
+            const siteFeaturesStr = siteFeatures.length > 0 ? siteFeatures.join('، ') : 'لم يتم تحديد أي ميزات / None';
+
+            const packageUpgrade = document.querySelector('input[name="package-upgrade"]:checked').value;
+            const executionTime = document.querySelector('input[name="execution-time"]:checked').value;
+
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            let messageText = '';
+
+            if (currentLang === 'en') {
+                messageText = `Hello Talabk Team,
+I would like to start my educational project with you!
+
+📋 Project Request Details:
+--------------------------------
+📦 Selected Package: *${selectedPackage}*
+
+🟢 Section 1: Quick Info
+👤 Name: ${name}
+📱 WhatsApp Number: ${phone}
+🌍 Country: ${country}
+
+🟢 Section 2: Project Type
+🎓 Classification: ${projectType}
+
+🟢 Section 3: Project Information
+🏫 Brand/Academy Name: ${brandName}
+📚 What we offer: ${brandOffers}
+🔗 Social Page / Website Link: ${brandLink}
+
+🟢 Section 4: Main Goal
+🎯 Primary Goal: ${goal}
+
+🟢 Section 5: Required Website Features
+🛠️ Features: ${siteFeaturesStr}
+
+🟢 Section 6: Package Upgrades
+⚡ Preference: ${packageUpgrade}
+
+🟢 Section 7: Execution Timeline
+📅 Starting Time: ${executionTime}`;
+            } else {
+                // Default Arabic
+                messageText = `السلام عليكم ورحمة الله وبركاته،
+حابب أبدأ مشروعي التعليمي مع منصة طلابك.
+
+📋 تفاصيل طلب المشروع:
+--------------------------------
+📦 الباقة المختارة: *${selectedPackage}*
+
+🟢 القسم 1: بيانات سريعة
+👤 الاسم: ${name}
+📱 رقم واتساب: ${phone}
+🌍 الدولة: ${country}
+
+🟢 القسم 2: نوع المشروع
+🎓 التصنيف: ${projectType}
+
+🟢 القسم 3: معلومات المشروع
+🏫 اسم الأكاديمية / البراند: ${brandName}
+📚 بتقدم إيه: ${brandOffers}
+🔗 رابط صفحة/موقع: ${brandLink}
+
+🟢 القسم 4: الهدف
+🎯 الهدف الرئيسي: ${goal}
+
+🟢 القسم 5: المطلوب في الموقع
+🛠️ الميزات المطلوبة: ${siteFeaturesStr}
+
+🟢 القسم 6: خيار الباقة والتطوير
+⚡ التطوير: ${packageUpgrade}
+
+🟢 القسم 7: وقت التنفيذ
+📅 وقت البدء: ${executionTime}`;
+            }
+
+            const whatsappPhone = '201550527744';
+            const encodedText = encodeURIComponent(messageText);
+            const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodedText}`;
+
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+        });
+    }
 });

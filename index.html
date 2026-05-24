@@ -145,7 +145,7 @@
                         <span data-i18n="price_starts_from">تبدأ من</span>
                         <h4>399 <span data-i18n="currency">ج.م</span></h4>
                     </div>
-                    <a href="https://wa.me/201550527744" class="btn btn-outline pricing-btn" data-i18n="order_pkg">الاشتراك/ الاستفسار عن الباقة</a>
+                    <button class="btn btn-outline pricing-btn start-project-btn" data-package="Starter" data-i18n="start_project">ابدأ مشروعك</button>
                 </div>
 
                 <!-- Pro Package -->
@@ -165,7 +165,7 @@
                         <span data-i18n="price_starts_from">تبدأ من</span>
                         <h4>699 <span data-i18n="currency">ج.م</span></h4>
                     </div>
-                    <a href="https://wa.me/201550527744" class="btn btn-primary pricing-btn" data-i18n="order_pkg">الاشتراك/ الاستفسار عن الباقة</a>
+                    <button class="btn btn-primary pricing-btn start-project-btn" data-package="Pro" data-i18n="start_project">ابدأ مشروعك</button>
                 </div>
 
                 <!-- Academy Package -->
@@ -184,7 +184,7 @@
                         <span data-i18n="price_starts_from">تبدأ من</span>
                         <h4>1500 <span data-i18n="currency">ج.م</span></h4>
                     </div>
-                    <a href="https://wa.me/201550527744" class="btn btn-outline pricing-btn" data-i18n="order_pkg">الاشتراك/ الاستفسار عن الباقة</a>
+                    <button class="btn btn-outline pricing-btn start-project-btn" data-package="Academy" data-i18n="start_project">ابدأ مشروعك</button>
                 </div>
             </div>
 
@@ -197,7 +197,7 @@
                         <p class="pricing-custom-note"><strong data-i18n="price_label">السعر:</strong> <span data-i18n="pkg_custom_price">مفتوح ويختلف على حسب نوع الموقع الذي يطلبه العميل.</span></p>
                     </div>
                     <div class="pricing-custom-action">
-                        <a href="https://wa.me/201550527744" class="btn btn-primary" data-i18n="contact_to_discuss">الاشتراك/ الاستفسار عن الباقة</a>
+                        <button class="btn btn-primary start-project-btn" data-package="Custom" data-i18n="start_project">ابدأ مشروعك</button>
                     </div>
                 </div>
             </div>
@@ -310,6 +310,259 @@
             <p data-i18n="footer_rights">&copy; 2026 طلابك. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
+
+
+    <!-- Project Setup Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card">
+            <!-- Close Button -->
+            <button id="modal-close" class="modal-close-btn" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 data-i18n="modal_title">ابدأ مشروعك التعليمي</h3>
+                <p><span data-i18n="modal_pkg_prefix">الباقة المختارة:</span> <span id="selected-package-name" class="pkg-badge">Pro</span></p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="form-progress"></div>
+                <div class="progress-text">
+                    <span data-i18n="step_label">الخطوة</span> <span id="current-step-num">1</span> <span data-i18n="step_of">من</span> 7
+                </div>
+            </div>
+
+            <!-- Form Element -->
+            <form id="project-wizard-form" onsubmit="event.preventDefault();">
+                <!-- Step 1: Quick Details -->
+                <div class="form-step active" data-step="1">
+                    <h4 class="step-title"><span class="step-num-circle">1</span> <span data-i18n="step1_title">البيانات السريعة</span></h4>
+                    <div class="form-group">
+                        <label for="client-name" data-i18n="label_name">الاسم كامل *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="client-name" required placeholder="أدخل اسمك الكريم">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-phone" data-i18n="label_phone">رقم واتساب *</label>
+                        <div class="input-wrapper">
+                            <i class="fab fa-whatsapp"></i>
+                            <input type="tel" id="client-phone" required placeholder="مثال: 01550527744">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-country" data-i18n="label_country">الدولة *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-globe-americas"></i>
+                            <input type="text" id="client-country" required placeholder="مثال: مصر">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Project Type -->
+                <div class="form-step" data-step="2">
+                    <h4 class="step-title"><span class="step-num-circle">2</span> <span data-i18n="step2_title">نوع المشروع</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="مدرس" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span data-i18n="opt_teacher">مدرس</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="أكاديمية">
+                            <div class="option-card-content">
+                                <i class="fas fa-university"></i>
+                                <span data-i18n="opt_academy">أكاديمية</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="كورس أونلاين">
+                            <div class="option-card-content">
+                                <i class="fas fa-laptop-code"></i>
+                                <span data-i18n="opt_online_course">كورس أونلاين</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 3: Project Info -->
+                <div class="form-step" data-step="3">
+                    <h4 class="step-title"><span class="step-num-circle">3</span> <span data-i18n="step3_title">معلومات المشروع</span></h4>
+                    <div class="form-group">
+                        <label for="brand-name" data-i18n="label_brand">اسم الأكاديمية / البراند *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-signature"></i>
+                            <input type="text" id="brand-name" required placeholder="مثال: أكاديمية التميز">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-offers" data-i18n="label_offers">بتقدم إيه؟ (مواد / كورسات) *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-book-open"></i>
+                            <input type="text" id="brand-offers" required placeholder="مثال: كورسات لغات، رياضيات للمرحلة الثانوية">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-link" data-i18n="label_link">عندك صفحة أو موقع حالي؟ (لينك اختياري)</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-link"></i>
+                            <input type="url" id="brand-link" placeholder="https://example.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Goal -->
+                <div class="form-step" data-step="4">
+                    <h4 class="step-title"><span class="step-num-circle">4</span> <span data-i18n="step4_title">الهدف الرئيسي</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="أجيب طلاب" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-user-plus"></i>
+                                <span data-i18n="opt_get_students">أجيب طلاب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="أعرض الكورسات">
+                            <div class="option-card-content">
+                                <i class="fas fa-images"></i>
+                                <span data-i18n="opt_show_courses">أعرض الكورسات</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="براند احترافي">
+                            <div class="option-card-content">
+                                <i class="fas fa-award"></i>
+                                <span data-i18n="opt_pro_brand">براند احترافي</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 5: What do you need in the website? -->
+                <div class="form-step" data-step="5">
+                    <h4 class="step-title"><span class="step-num-circle">5</span> <span data-i18n="step5_title">محتاج إيه في الموقع؟</span></h4>
+                    <p class="step-subtitle" data-i18n="step5_subtitle">يمكنك اختيار أكثر من خيار</p>
+                    <div class="options-grid checkboxes-grid">
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="صفحة كورسات">
+                            <div class="option-card-content">
+                                <i class="fas fa-list-ul"></i>
+                                <span data-i18n="opt_courses_page">صفحة كورسات</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="تسجيل طلاب">
+                            <div class="option-card-content">
+                                <i class="fas fa-user-check"></i>
+                                <span data-i18n="opt_student_reg">تسجيل طلاب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="دفع أونلاين">
+                            <div class="option-card-content">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-i18n="opt_online_pay">دفع أونلاين</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="واتساب">
+                            <div class="option-card-content">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-i18n="opt_whatsapp">واتساب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="لوحة تحكم">
+                            <div class="option-card-content">
+                                <i class="fas fa-sliders-h"></i>
+                                <span data-i18n="opt_dashboard">لوحة تحكم</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 6: Start/Upgrade package -->
+                <div class="form-step" data-step="6">
+                    <h4 class="step-title"><span class="step-num-circle">6</span> <span data-i18n="step6_title">تحب تبدأ بنفس الباقة ولا تطورها حسب احتياجك؟</span></h4>
+                    <div class="options-grid vertical-grid">
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="نفس الباقة" checked>
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-check-double"></i>
+                                <div>
+                                    <h5 data-i18n="opt_same_pkg">نفس الباقة</h5>
+                                    <p data-i18n="opt_same_pkg_desc">البدء بالميزات المذكورة في الباقة مباشرة</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="تطوير بسيط">
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <h5 data-i18n="opt_minor_upgrade">تطوير بسيط</h5>
+                                    <p data-i18n="opt_minor_upgrade_desc">إضافة لمسات خاصة وبعض التعديلات المحددة</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="تطوير كامل">
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h5 data-i18n="opt_full_upgrade">تطوير كامل</h5>
+                                    <p data-i18n="opt_full_upgrade_desc">بناء ميزات مخصصة إضافية بالكامل لتناسب عملك</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 7: Execution Time -->
+                <div class="form-step" data-step="7">
+                    <h4 class="step-title"><span class="step-num-circle">7</span> <span data-i18n="step7_title">وقت التنفيذ المناسب لك</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="عايزه فورًا" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-bolt"></i>
+                                <span data-i18n="opt_now">عايزه فورًا</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="خلال أسبوع">
+                            <div class="option-card-content">
+                                <i class="fas fa-calendar-week"></i>
+                                <span data-i18n="opt_week">خلال أسبوع</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="لسه بفكر">
+                            <div class="option-card-content">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span data-i18n="opt_thinking">لسه بفكر</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="modal-footer">
+                    <button type="button" id="prev-btn" class="btn btn-outline" style="display: none;" data-i18n="btn_prev">السابق</button>
+                    <button type="button" id="next-btn" class="btn btn-primary" data-i18n="btn_next">التالي</button>
+                    <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp pulse-animation" style="display: none;">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="btn_whatsapp">كمل على واتساب</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
