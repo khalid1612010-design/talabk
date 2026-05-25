@@ -95,7 +95,34 @@ const translations = {
         opt_thinking: "لسه بفكر",
         btn_prev: "السابق",
         btn_next: "التالي",
-        btn_whatsapp: "كمل على واتساب"
+        btn_whatsapp: "كمل على واتساب",
+        
+        // Pricing Packages Translations
+        pkg_starter: "موقع مدرس مستقل",
+        pkg_starter_desc: "للبداية السريعة والاحترافية",
+        feat_starter_1: "موقع عبارة عن لاندنج بيج واحدة",
+        feat_starter_2: "تصميم منظم ومحترم",
+        feat_starter_3: "تدعم لغة واحدة فقط",
+        feat_starter_4: "زر تواصل مباشر عبر واتساب",
+        pkg_pro: "Portfolio مدرس محترف",
+        pkg_pro_desc: "للمحترفين والنمو المستمر",
+        feat_pro_1: "موقع كامل ومنظم بطريقة احترافية",
+        feat_pro_2: "إضافة صفحات التواصل الاجتماعي",
+        feat_pro_3: "دعم لغتين أو ثلاثة على حسب الطلب",
+        feat_pro_4: "دعم كامل لمدة شهر مجاناً",
+        pkg_academy: "Academy",
+        pkg_academy_desc: "للأكاديميات والمؤسسات الكبيرة",
+        feat_academy_1: "أكاديمية احترافية متكاملة",
+        feat_academy_2: "عدد صفحات غير محدود",
+        feat_academy_3: "دعم 5 لغات مختلفة",
+        feat_academy_4: "لوحة تحكم للمشرف لتعديل أي حاجة براحته",
+        price_starts_from: "تبدأ من",
+        currency: "ج.م",
+        most_requested: "الأكثر طلباً",
+        pkg_custom: "باقة الموقع الخاص",
+        pkg_custom_desc: "للأشخاص الذين يرغبون في موقع بطريقة مختلفة أو بأسلوب يشبه أكاديمية خاصة أو مدرس معين.",
+        price_label: "السعر:",
+        pkg_custom_price: "مفتوح ويختلف على حسب نوع الموقع الذي يطلبه العميل."
     },
     en: {
         nav_features: "Features",
@@ -193,7 +220,34 @@ const translations = {
         opt_thinking: "Still thinking",
         btn_prev: "Previous",
         btn_next: "Next",
-        btn_whatsapp: "Continue on WhatsApp"
+        btn_whatsapp: "Continue on WhatsApp",
+        
+        // Pricing Packages Translations
+        pkg_starter: "Freelance Teacher Website",
+        pkg_starter_desc: "For a quick and professional start",
+        feat_starter_1: "Single landing page website",
+        feat_starter_2: "Organized and professional design",
+        feat_starter_3: "Supports one language only",
+        feat_starter_4: "Direct WhatsApp contact button",
+        pkg_pro: "Professional Teacher Portfolio",
+        pkg_pro_desc: "For professionals and continuous growth",
+        feat_pro_1: "Complete and professionally organized website",
+        feat_pro_2: "Integration of social media pages",
+        feat_pro_3: "Support for 2 or 3 languages as requested",
+        feat_pro_4: "Full support for one month for free",
+        pkg_academy: "Academy",
+        pkg_academy_desc: "For academies and large institutions",
+        feat_academy_1: "Integrated professional academy",
+        feat_academy_2: "Unlimited number of pages",
+        feat_academy_3: "Support for 5 different languages",
+        feat_academy_4: "Admin dashboard to easily edit anything",
+        price_starts_from: "Starts from",
+        currency: "EGP",
+        most_requested: "Most Requested",
+        pkg_custom: "Custom Website Package",
+        pkg_custom_desc: "For those who want a website with a unique layout or styled for a specific academy or teacher.",
+        price_label: "Price:",
+        pkg_custom_price: "Custom, depending on the type of website requested by the client."
     },
     es: {
         nav_features: "Características",
@@ -291,7 +345,34 @@ const translations = {
         opt_thinking: "Aún pensando",
         btn_prev: "Anterior",
         btn_next: "Siguiente",
-        btn_whatsapp: "Continuar en WhatsApp"
+        btn_whatsapp: "Continuar en WhatsApp",
+        
+        // Pricing Packages Translations
+        pkg_starter: "Sitio Web de Profesor Independiente",
+        pkg_starter_desc: "Para un comienzo rápido y profesional",
+        feat_starter_1: "Sitio web de una sola página de destino",
+        feat_starter_2: "Diseño organizado y profesional",
+        feat_starter_3: "Soporta un solo idioma",
+        feat_starter_4: "Botón de contacto directo por WhatsApp",
+        pkg_pro: "Portafolio de Profesor Profesional",
+        pkg_pro_desc: "Para profesionales y crecimiento continuo",
+        feat_pro_1: "Sitio web completo y organizado profesionalmente",
+        feat_pro_2: "Integración de páginas de redes sociales",
+        feat_pro_3: "Soporte para 2 o 3 idiomas según lo solicitado",
+        feat_pro_4: "Soporte completo durante un mes gratis",
+        pkg_academy: "Academia",
+        pkg_academy_desc: "Para academias y grandes instituciones",
+        feat_academy_1: "Academia profesional integrada",
+        feat_academy_2: "Número ilimitado de páginas",
+        feat_academy_3: "Soporte para 5 idiomas diferentes",
+        feat_academy_4: "Panel de administración para editar cualquier cosa fácilmente",
+        price_starts_from: "Desde",
+        currency: "EGP",
+        most_requested: "Más Solicitado",
+        pkg_custom: "Paquete de Sitio Web Personalizado",
+        pkg_custom_desc: "Para quienes desean un sitio web con un diseño único o adaptado a una academia o profesor específico.",
+        price_label: "Precio:",
+        pkg_custom_price: "Personalizado, según el tipo de sitio web solicitado por el cliente."
     },
     de: {
         nav_features: "Funktionen",
@@ -389,7 +470,34 @@ const translations = {
         opt_thinking: "Noch am Überlegen",
         btn_prev: "Zurück",
         btn_next: "Weiter",
-        btn_whatsapp: "Weiter auf WhatsApp"
+        btn_whatsapp: "Weiter auf WhatsApp",
+        
+        // Pricing Packages Translations
+        pkg_starter: "Website für freiberufliche Lehrkräfte",
+        pkg_starter_desc: "Für einen schnellen und professionellen Start",
+        feat_starter_1: "Website mit einer einzigen Landingpage",
+        feat_starter_2: "Organisiertes und professionelles Design",
+        feat_starter_3: "Unterstützt nur eine Sprache",
+        feat_starter_4: "Direkter WhatsApp-Kontakt-Button",
+        pkg_pro: "Portfolio für professionelle Lehrkräfte",
+        pkg_pro_desc: "Für Profis und kontinuierliches Wachstum",
+        feat_pro_1: "Vollständige und professionell organisierte Website",
+        feat_pro_2: "Integration von Social-Media-Seiten",
+        feat_pro_3: "Unterstützung für 2 oder 3 Sprachen auf Anfrage",
+        feat_pro_4: "Kostenloser umfassender Support für einen Monat",
+        pkg_academy: "Akademie",
+        pkg_academy_desc: "Für Akademien und große Institutionen",
+        feat_academy_1: "Integrierte professionelle Akademie",
+        feat_academy_2: "Unbegrenzte Seitenanzahl",
+        feat_academy_3: "Unterstützung für 5 verschiedene Sprachen",
+        feat_academy_4: "Admin-Dashboard zur einfachen Bearbeitung aller Inhalte",
+        price_starts_from: "Ab",
+        currency: "EGP",
+        most_requested: "Am meisten nachgefragt",
+        pkg_custom: "Individuelles Website-Paket",
+        pkg_custom_desc: "Für diejenigen, die eine Website mit einem einzigartigen Layout oder im Stil einer bestimmten Akademie oder eines bestimmten Lehrers wünschen.",
+        price_label: "Preis:",
+        pkg_custom_price: "Individuell, je nach der vom Kunden gewünschten Art der Website."
     },
     fr: {
         nav_features: "Fonctionnalités",
@@ -487,7 +595,34 @@ const translations = {
         opt_thinking: "Toujours en réflexion",
         btn_prev: "Précédent",
         btn_next: "Suivant",
-        btn_whatsapp: "Continuer sur WhatsApp"
+        btn_whatsapp: "Continuer sur WhatsApp",
+        
+        // Pricing Packages Translations
+        pkg_starter: "Site Web d'Enseignant Indépendant",
+        pkg_starter_desc: "Pour un démarrage rapide et professionnel",
+        feat_starter_1: "Site web d'une seule page de destination",
+        feat_starter_2: "Design organisé et professionnel",
+        feat_starter_3: "Prend en charge une seule langue",
+        feat_starter_4: "Bouton de contact direct WhatsApp",
+        pkg_pro: "Portfolio d'Enseignant Professionnel",
+        pkg_pro_desc: "Pour les professionnels et une croissance continue",
+        feat_pro_1: "Site web complet et organisé de manière professionnelle",
+        feat_pro_2: "Intégration des pages de réseaux sociaux",
+        feat_pro_3: "Prise en charge de 2 ou 3 langues sur demande",
+        feat_pro_4: "Assistance complète gratuite pendant un mois",
+        pkg_academy: "Académie",
+        pkg_academy_desc: "Pour les académies et les grandes institutions",
+        feat_academy_1: "Académie professionnelle intégrée",
+        feat_academy_2: "Nombre illimité de pages",
+        feat_academy_3: "Prise en charge de 5 langues différentes",
+        feat_academy_4: "Tableau de bord d'administration pour modifier facilement tout",
+        price_starts_from: "À partir de",
+        currency: "EGP",
+        most_requested: "Le plus demandé",
+        pkg_custom: "Forfait Site Web Personnalisé",
+        pkg_custom_desc: "Pour ceux qui souhaitent un site web avec une mise en page unique ou adapté à une académie ou un enseignant spécifique.",
+        price_label: "Prix :",
+        pkg_custom_price: "Sur mesure, selon le type de site web demandé par le client."
     }
 };
 
@@ -689,8 +824,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModal = (pkg) => {
         selectedPackage = pkg;
         if (selectedPkgSpan) {
-            // Translate package name dynamically if possible, else use raw
-            selectedPkgSpan.textContent = pkg;
+            // Translate package name dynamically
+            const currentLang = localStorage.getItem('lang') || 'ar';
+            const translationKey = `pkg_${pkg.toLowerCase()}`;
+            if (translations[currentLang] && translations[currentLang][translationKey]) {
+                selectedPkgSpan.textContent = translations[currentLang][translationKey];
+            } else {
+                selectedPkgSpan.textContent = pkg;
+            }
         }
         
         currentStep = 1;
@@ -800,6 +941,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const executionTime = document.querySelector('input[name="execution-time"]:checked').value;
 
             const currentLang = localStorage.getItem('lang') || 'ar';
+            
+            // Translate package name for WhatsApp message
+            const translationKey = `pkg_${selectedPackage.toLowerCase()}`;
+            const translatedPackageName = (translations[currentLang] && translations[currentLang][translationKey])
+                ? translations[currentLang][translationKey]
+                : selectedPackage;
+
             let messageText = '';
 
             if (currentLang === 'en') {
@@ -808,7 +956,7 @@ I would like to start my educational project with you!
 
 📋 Project Request Details:
 --------------------------------
-📦 Selected Package: *${selectedPackage}*
+📦 Selected Package: *${translatedPackageName}*
 
 🟢 Section 1: Quick Info
 👤 Name: ${name}
@@ -841,7 +989,7 @@ I would like to start my educational project with you!
 
 📋 تفاصيل طلب المشروع:
 --------------------------------
-📦 الباقة المختارة: *${selectedPackage}*
+📦 الباقة المختارة: *${translatedPackageName}*
 
 🟢 القسم 1: بيانات سريعة
 👤 الاسم: ${name}
