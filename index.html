@@ -201,6 +201,11 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Pricing Disclaimer Note -->
+            <div class="pricing-disclaimer fade-up text-center delay-3">
+                <p><i class="fas fa-info-circle"></i> <span data-i18n="pricing_disclaimer">ملاحظة: سعر أي باقة لا يشمل الاستضافة (الهوست) أو الدومين</span></p>
+            </div>
         </div>
     </section>
 
@@ -330,7 +335,7 @@
             <div class="progress-container">
                 <div class="progress-bar" id="form-progress"></div>
                 <div class="progress-text">
-                    <span data-i18n="step_label">الخطوة</span> <span id="current-step-num">1</span> <span data-i18n="step_of">من</span> 7
+                    <span data-i18n="step_label">الخطوة</span> <span id="current-step-num">1</span> <span data-i18n="step_of">من</span> 8
                 </div>
             </div>
 
@@ -524,9 +529,22 @@
                     </div>
                 </div>
 
-                <!-- Step 7: Execution Time -->
+                <!-- Step 7: Coupon Code -->
                 <div class="form-step" data-step="7">
-                    <h4 class="step-title"><span class="step-num-circle">7</span> <span data-i18n="step7_title">وقت التنفيذ المناسب لك</span></h4>
+                    <h4 class="step-title"><span class="step-num-circle">7</span> <span data-i18n="step7_title">هل لديك كوبون؟</span></h4>
+                    <p class="step-subtitle" data-i18n="step7_subtitle">إذا كان لديك كود كوبون خصم، اكتبه هنا. إذا لم يكن لديك، يمكنك الاستمرار وتخطي هذا السؤال.</p>
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label for="coupon-code" data-i18n="label_coupon">كوبون الخصم (اختياري)</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-ticket-alt"></i>
+                            <input type="text" id="coupon-code" placeholder="أدخل الكوبون هنا">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8: Execution Time -->
+                <div class="form-step" data-step="8">
+                    <h4 class="step-title"><span class="step-num-circle">8</span> <span data-i18n="step8_title">وقت التنفيذ المناسب لك</span></h4>
                     <div class="options-grid">
                         <label class="option-card-radio">
                             <input type="radio" name="execution-time" value="عايزه فورًا" checked>

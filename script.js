@@ -89,7 +89,12 @@ const translations = {
         opt_minor_upgrade_desc: "إضافة لمسات خاصة وبعض التعديلات المحددة",
         opt_full_upgrade: "تطوير كامل",
         opt_full_upgrade_desc: "بناء ميزات مخصصة إضافية بالكامل لتناسب عملك",
-        step7_title: "وقت التنفيذ المناسب لك",
+        pricing_disclaimer: "ملاحظة: سعر أي باقة لا يشمل الاستضافة (الهوست) أو الدومين",
+        step7_title: "هل لديك كوبون؟",
+        step7_subtitle: "إذا كان لديك كود كوبون خصم، اكتبه هنا. إذا لم يكن لديك، يمكنك الاستمرار وتخطي هذا السؤال.",
+        label_coupon: "كوبون الخصم (اختياري)",
+        placeholder_coupon: "أدخل الكوبون هنا",
+        step8_title: "وقت التنفيذ المناسب لك",
         opt_now: "عايزه فورًا",
         opt_week: "خلال أسبوع",
         opt_thinking: "لسه بفكر",
@@ -214,7 +219,12 @@ const translations = {
         opt_minor_upgrade_desc: "Add special touches and specific modifications",
         opt_full_upgrade: "Full Upgrade",
         opt_full_upgrade_desc: "Build fully customized extra features to suit your business",
-        step7_title: "Suitable Execution Timeline",
+        pricing_disclaimer: "Note: The price of any package does not include hosting or domain",
+        step7_title: "Do you have a coupon?",
+        step7_subtitle: "If you have a discount coupon code, enter it here. If not, you can continue and skip this question.",
+        label_coupon: "Discount Coupon (Optional)",
+        placeholder_coupon: "Enter coupon here",
+        step8_title: "Suitable Execution Timeline",
         opt_now: "Immediately",
         opt_week: "Within a week",
         opt_thinking: "Still thinking",
@@ -339,7 +349,12 @@ const translations = {
         opt_minor_upgrade_desc: "Agregar toques especiales y modificaciones específicas",
         opt_full_upgrade: "Actualización Completa",
         opt_full_upgrade_desc: "Construir funciones personalizadas adicionales",
-        step7_title: "Plazo de Ejecución Adecuado",
+        pricing_disclaimer: "Nota: El precio de cualquier paquete no incluye hosting o dominio",
+        step7_title: "¿Tienes un cupón?",
+        step7_subtitle: "Si tienes un código de cupón de descuento, ingrésalo aquí. Si no, puedes continuar y omitir esta pregunta.",
+        label_coupon: "Cupón de Descuento (Opcional)",
+        placeholder_coupon: "Ingrese el cupón aquí",
+        step8_title: "Plazo de Ejecución Adecuado",
         opt_now: "Inmediatamente",
         opt_week: "Dentro de una semana",
         opt_thinking: "Aún pensando",
@@ -464,7 +479,12 @@ const translations = {
         opt_minor_upgrade_desc: "Besondere Akzente und spezifische Änderungen hinzufügen",
         opt_full_upgrade: "Vollständiges Upgrade",
         opt_full_upgrade_desc: "Komplett maßgeschneiderte Zusatzfunktionen erstellen",
-        step7_title: "Geeigneter Zeitrahmen",
+        pricing_disclaimer: "Hinweis: Der Preis eines Pakets beinhaltet kein Hosting oder Domain",
+        step7_title: "Haben Sie einen Gutschein?",
+        step7_subtitle: "Wenn Sie einen Rabattcode haben, geben Sie ihn hier ein. Wenn nicht, können Sie fortfahren und diese Frage überspringen.",
+        label_coupon: "Rabattgutschein (Optional)",
+        placeholder_coupon: "Gutschein hier eingeben",
+        step8_title: "Geeigneter Zeitrahmen",
         opt_now: "Sofort",
         opt_week: "Innerhalb einer Woche",
         opt_thinking: "Noch am Überlegen",
@@ -589,7 +609,12 @@ const translations = {
         opt_minor_upgrade_desc: "Ajouter des touches spéciales et des modifications spécifiques",
         opt_full_upgrade: "Mise à Niveau Complète",
         opt_full_upgrade_desc: "Construire des fonctionnalités personnalisées supplémentaires",
-        step7_title: "Calendrier d'Exécution Adapté",
+        pricing_disclaimer: "Remarque: Le prix de tout forfait ne comprend pas l'hébergement ou le domaine",
+        step7_title: "Avez-vous un coupon?",
+        step7_subtitle: "Si vous avez un code coupon de réduction, saisissez-le ici. Sinon, vous pouvez continuer et ignorer cette question.",
+        label_coupon: "Coupon de Réduction (Optionnel)",
+        placeholder_coupon: "Entrez le coupon ici",
+        step8_title: "Calendrier d'Exécution Adapté",
         opt_now: "Immédiatement",
         opt_week: "D'ici une semaine",
         opt_thinking: "Toujours en réflexion",
@@ -775,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Update progress bar
-        const progressPct = (currentStep / 7) * 100;
+        const progressPct = (currentStep / 8) * 100;
         formProgressBar.style.width = `${progressPct}%`;
         currentStepNumSpan.textContent = currentStep;
 
@@ -784,7 +809,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevBtn.style.display = 'none';
             nextBtn.style.display = 'block';
             submitWhatsappBtn.style.display = 'none';
-        } else if (currentStep === 7) {
+        } else if (currentStep === 8) {
             prevBtn.style.display = 'block';
             nextBtn.style.display = 'none';
             submitWhatsappBtn.style.display = 'block';
@@ -900,7 +925,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             if (validateStep(currentStep)) {
-                if (currentStep < 7) {
+                if (currentStep < 8) {
                     currentStep++;
                     updateStepUI();
                 }
@@ -938,6 +963,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const siteFeaturesStr = siteFeatures.length > 0 ? siteFeatures.join('، ') : 'لم يتم تحديد أي ميزات / None';
 
             const packageUpgrade = document.querySelector('input[name="package-upgrade"]:checked').value;
+            const coupon = document.getElementById('coupon-code').value.trim() || 'لا يوجد / None';
             const executionTime = document.querySelector('input[name="execution-time"]:checked').value;
 
             const currentLang = localStorage.getItem('lang') || 'ar';
@@ -980,7 +1006,10 @@ I would like to start my educational project with you!
 🟢 Section 6: Package Upgrades
 ⚡ Preference: ${packageUpgrade}
 
-🟢 Section 7: Execution Timeline
+🟢 Section 7: Coupon
+🎫 Coupon Code: ${coupon}
+
+🟢 Section 8: Execution Timeline
 📅 Starting Time: ${executionTime}`;
             } else {
                 // Default Arabic
@@ -1013,7 +1042,10 @@ I would like to start my educational project with you!
 🟢 القسم 6: خيار الباقة والتطوير
 ⚡ التطوير: ${packageUpgrade}
 
-🟢 القسم 7: وقت التنفيذ
+🟢 القسم 7: الكوبون
+🎫 كود الكوبون: ${coupon}
+
+🟢 القسم 8: وقت التنفيذ
 📅 وقت البدء: ${executionTime}`;
             }
 
