@@ -1,0 +1,7 @@
+# robots.txt for Talabk Platform (منصة طلابك)
+# Designed for maximum visibility and indexing by all search engines
+
+User-agent: *
+Allow: /
+
+Sitemap: https://talabk-phi.vercel.app/sitemap.xml

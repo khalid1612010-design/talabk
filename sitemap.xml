@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://talabk-phi.vercel.app/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Multi-language indexing links for search engines -->
+    <xhtml:link rel="alternate" hreflang="ar" href="https://talabk-phi.vercel.app/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://talabk-phi.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://talabk-phi.vercel.app/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://talabk-phi.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://talabk-phi.vercel.app/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://talabk-phi.vercel.app/"/>
+  </url>
+</urlset>

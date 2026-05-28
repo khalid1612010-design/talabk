@@ -127,7 +127,9 @@ const translations = {
         pkg_custom: "باقة الموقع الخاص",
         pkg_custom_desc: "للأشخاص الذين يرغبون في موقع بطريقة مختلفة أو بأسلوب يشبه أكاديمية خاصة أو مدرس معين.",
         price_label: "السعر:",
-        pkg_custom_price: "مفتوح ويختلف على حسب نوع الموقع الذي يطلبه العميل."
+        pkg_custom_price: "مفتوح ويختلف على حسب نوع الموقع الذي يطلبه العميل.",
+        seo_title: "منصة طلابك | منصتك التعليمية المتكاملة للمدرسين والأكاديميات",
+        seo_desc: "منصة طلابك هي الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الدورات التعليمية، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور وتزيد من مبيعاتك."
     },
     en: {
         nav_features: "Features",
@@ -257,7 +259,9 @@ const translations = {
         pkg_custom: "Custom Website Package",
         pkg_custom_desc: "For those who want a website with a unique layout or styled for a specific academy or teacher.",
         price_label: "Price:",
-        pkg_custom_price: "Custom, depending on the type of website requested by the client."
+        pkg_custom_price: "Custom, depending on the type of website requested by the client.",
+        seo_title: "Talabk Platform | The Integrated Educational Platform for Teachers & Academies",
+        seo_desc: "Talabk Platform is the perfect solution for teachers and academies to increase student count, organize educational courses, and professionally showcase your expertise to attract parents and grow sales."
     },
     es: {
         nav_features: "Características",
@@ -387,7 +391,9 @@ const translations = {
         pkg_custom: "Paquete de Sitio Web Personalizado",
         pkg_custom_desc: "Para quienes desean un sitio web con un diseño único o adaptado a una academia o profesor específico.",
         price_label: "Precio:",
-        pkg_custom_price: "Personalizado, según el tipo de sitio web solicitado por el cliente."
+        pkg_custom_price: "Personalizado, según el tipo de sitio web solicitado por el cliente.",
+        seo_title: "Plataforma Talabk | La plataforma educativa integrada para profesores y academias",
+        seo_desc: "La Plataforma Talabk es la solución perfecta para que los profesores y las academias aumenten el número de estudiantes, organizen cursos educativos y muestren su experiencia de manera profesional para atraer a los padres y aumentar las ventas."
     },
     de: {
         nav_features: "Funktionen",
@@ -517,7 +523,9 @@ const translations = {
         pkg_custom: "Individuelles Website-Paket",
         pkg_custom_desc: "Für diejenigen, die eine Website mit einem einzigartigen Layout oder im Stil einer bestimmten Akademie oder eines bestimmten Lehrers wünschen.",
         price_label: "Preis:",
-        pkg_custom_price: "Individuell, je nach der vom Kunden gewünschten Art der Website."
+        pkg_custom_price: "Individuell, je nach der vom Kunden gewünschten Art der Website.",
+        seo_title: "Talabk Plattform | Die integrierte Bildungsplattform für Lehrer und Akademien",
+        seo_desc: "Talabk Plattform ist die perfekte Lösung für Lehrer und Akademien, um die Schülerzahl zu erhöhen, Bildungskurse zu organisieren und Ihr Fachwissen professionell zu präsentieren, um Eltern anzuziehen und den Umsatz zu steigern."
     },
     fr: {
         nav_features: "Fonctionnalités",
@@ -647,7 +655,9 @@ const translations = {
         pkg_custom: "Forfait Site Web Personnalisé",
         pkg_custom_desc: "Pour ceux qui souhaitent un site web avec une mise en page unique ou adapté à une académie ou un enseignant spécifique.",
         price_label: "Prix :",
-        pkg_custom_price: "Sur mesure, selon le type de site web demandé par le client."
+        pkg_custom_price: "Sur mesure, selon le type de site web demandé par le client.",
+        seo_title: "Plateforme Talabk | La plateforme éducative intégrée pour les enseignants et les académies",
+        seo_desc: "La Plateforme Talabk est la solution parfaite pour les enseignants et les académies pour augmenter le nombre d'étudiants, organiser des cours éducatifs et présenter professionnellement votre expertise afin d'attirer les parents et d'accroître les ventes."
     }
 };
 
@@ -697,6 +707,19 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('lang', lang);
         if (langSelect) langSelect.value = lang;
         
+        // Update Page Title and Meta Description for SEO dynamically
+        if (translations[lang]) {
+            if (translations[lang].seo_title) {
+                document.title = translations[lang].seo_title;
+            }
+            if (translations[lang].seo_desc) {
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', translations[lang].seo_desc);
+                }
+            }
+        }
+        
         // Update texts
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
@@ -712,7 +735,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Initialize Language
-    const savedLang = localStorage.getItem('lang') || 'ar';
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    const savedLang = urlLang || localStorage.getItem('lang') || 'ar';
     setLanguage(savedLang);
 
     if (langSelect) {
