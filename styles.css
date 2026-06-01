@@ -1167,3 +1167,53 @@ html[dir="ltr"] .option-card-content-horizontal {
 .pricing-disclaimer i {
     color: var(--accent-color);
 }
+
+/* ==========================================
+   Currency Switcher Styles
+   ========================================== */
+.currency-switcher-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.35rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 0 auto 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+[data-theme="dark"] .currency-switcher-container {
+    background-color: rgba(30, 41, 59, 0.7);
+    border-color: var(--border-color);
+}
+
+.currency-btn {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.currency-btn:hover {
+    color: var(--primary-color);
+}
+
+.currency-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Dynamic Pricing Switcher Animations */
+.price-val, .price-currency {
+    transition: opacity 0.15s ease-in-out;
+}

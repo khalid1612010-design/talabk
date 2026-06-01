@@ -49,7 +49,7 @@ const translations = {
         contact_to_discuss: "الاشتراك/ الاستفسار عن الباقة",
         
         // Modal Strings
-        start_project: "ابدأ مشروعك",
+        start_project: "(الاشتراك \\ التفاصيل)",
         modal_title: "ابدأ مشروعك التعليمي",
         modal_pkg_prefix: "الباقة المختارة:",
         step_label: "الخطوة",
@@ -181,7 +181,7 @@ const translations = {
         contact_to_discuss: "Subscribe / Inquire about Package",
         
         // Modal Strings
-        start_project: "Start Your Project",
+        start_project: "(Subscription / Details)",
         modal_title: "Start Your Educational Project",
         modal_pkg_prefix: "Selected Package:",
         step_label: "Step",
@@ -313,7 +313,7 @@ const translations = {
         contact_to_discuss: "Suscribirse / Consultar sobre el Paquete",
         
         // Modal Strings
-        start_project: "Iniciar Proyecto",
+        start_project: "(Suscripción / Detalles)",
         modal_title: "Comience su Proyecto Educativo",
         modal_pkg_prefix: "Paquete Seleccionado:",
         step_label: "Paso",
@@ -445,7 +445,7 @@ const translations = {
         contact_to_discuss: "Abonnieren / Über das Paket anfragen",
         
         // Modal Strings
-        start_project: "Projekt starten",
+        start_project: "(Abonnement / Details)",
         modal_title: "Starten Sie Ihr Bildungsprojekt",
         modal_pkg_prefix: "Ausgewähltes Paket:",
         step_label: "Schritt",
@@ -577,7 +577,7 @@ const translations = {
         contact_to_discuss: "S'abonner / Se renseigner sur le forfait",
         
         // Modal Strings
-        start_project: "Lancer le Projet",
+        start_project: "(S'abonner / Détails)",
         modal_title: "Commencez Votre Projet Éducatif",
         modal_pkg_prefix: "Forfait Sélectionné:",
         step_label: "Étape",
@@ -690,9 +690,102 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
     });
 
-    // 2. Language Switcher Logic
+    // 2. Language Switcher & Currency Logic
     const langSelect = document.getElementById('language-select');
     
+    const packagePrices = {
+        EGP: {
+            starter: "699",
+            pro: "999",
+            academy: "1499"
+        },
+        SAR: {
+            starter: "99",
+            pro: "199",
+            academy: "399"
+        },
+        USD: {
+            starter: "29",
+            pro: "59",
+            academy: "99"
+        }
+    };
+
+    const currencySymbols = {
+        ar: {
+            EGP: "ج.م",
+            SAR: "ريال",
+            USD: "دولار"
+        },
+        en: {
+            EGP: "EGP",
+            SAR: "SAR",
+            USD: "USD"
+        },
+        es: {
+            EGP: "EGP",
+            SAR: "SAR",
+            USD: "USD"
+        },
+        de: {
+            EGP: "EGP",
+            SAR: "SAR",
+            USD: "USD"
+        },
+        fr: {
+            EGP: "EGP",
+            SAR: "SAR",
+            USD: "USD"
+        }
+    };
+
+    let currentCurrency = localStorage.getItem('selectedCurrency') || 'EGP';
+
+    const updatePricingDisplay = (currency) => {
+        currentCurrency = currency;
+        localStorage.setItem('selectedCurrency', currency);
+
+        // Update active class on switcher buttons
+        const currencyButtons = document.querySelectorAll('.currency-btn');
+        currencyButtons.forEach(btn => {
+            if (btn.getAttribute('data-currency') === currency) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        const activeLang = localStorage.getItem('lang') || 'ar';
+        
+        // Update pricing details in pricing cards
+        const priceVals = document.querySelectorAll('.price-val');
+        priceVals.forEach(priceValEl => {
+            const pkg = priceValEl.getAttribute('data-package');
+            if (packagePrices[currency] && packagePrices[currency][pkg]) {
+                const newPrice = packagePrices[currency][pkg];
+                // Smooth transition
+                priceValEl.style.opacity = '0';
+                setTimeout(() => {
+                    priceValEl.textContent = newPrice;
+                    priceValEl.style.opacity = '1';
+                }, 150);
+            }
+        });
+
+        // Update currency labels inside pricing cards
+        const currencyEls = document.querySelectorAll('.price-currency');
+        currencyEls.forEach(currencyEl => {
+            const langSymbols = currencySymbols[activeLang] || currencySymbols['ar'];
+            const newCurrencyText = langSymbols[currency] || currency;
+            // Smooth transition
+            currencyEl.style.opacity = '0';
+            setTimeout(() => {
+                currencyEl.textContent = newCurrencyText;
+                currencyEl.style.opacity = '1';
+            }, 150);
+        });
+    };
+
     const setLanguage = (lang) => {
         // Change document direction and lang
         if (lang === 'ar') {
@@ -724,6 +817,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
+            if (key === 'currency') return; // Skip general currency update, handled by updatePricingDisplay
             if (translations[lang] && translations[lang][key]) {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = translations[lang][key];
@@ -732,6 +826,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+
+        // Sync currency and pricing display
+        updatePricingDisplay(currentCurrency);
     };
 
     // Initialize Language
@@ -745,6 +842,15 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(e.target.value);
         });
     }
+
+    // Set up currency selector buttons click handlers
+    const currencyButtons = document.querySelectorAll('.currency-btn');
+    currencyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const selectedCurr = btn.getAttribute('data-currency');
+            updatePricingDisplay(selectedCurr);
+        });
+    });
 
     // 3. Scroll Animations using Intersection Observer
     const animatedElements = document.querySelectorAll('.fade-up, .fade-in');
