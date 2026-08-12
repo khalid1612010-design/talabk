@@ -695,51 +695,44 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const packagePrices = {
         EGP: {
-            starter: "699",
-            pro: "999",
-            academy: "1499"
+            starter: "1000",
+            pro: "2000",
+            academy: "5000"
         },
         SAR: {
-            starter: "99",
-            pro: "199",
-            academy: "399"
-        },
-        USD: {
-            starter: "29",
-            pro: "59",
-            academy: "99"
+            starter: "150",
+            pro: "300",
+            academy: "750"
         }
     };
 
     const currencySymbols = {
         ar: {
             EGP: "ج.م",
-            SAR: "ريال",
-            USD: "دولار"
+            SAR: "ريال"
         },
         en: {
             EGP: "EGP",
-            SAR: "SAR",
-            USD: "USD"
+            SAR: "SAR"
         },
         es: {
             EGP: "EGP",
-            SAR: "SAR",
-            USD: "USD"
+            SAR: "SAR"
         },
         de: {
             EGP: "EGP",
-            SAR: "SAR",
-            USD: "USD"
+            SAR: "SAR"
         },
         fr: {
             EGP: "EGP",
-            SAR: "SAR",
-            USD: "USD"
+            SAR: "SAR"
         }
     };
 
     let currentCurrency = localStorage.getItem('selectedCurrency') || 'EGP';
+    if (currentCurrency !== 'EGP' && currentCurrency !== 'SAR') {
+        currentCurrency = 'EGP';
+    }
 
     const updatePricingDisplay = (currency) => {
         currentCurrency = currency;
