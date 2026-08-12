@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>منصة طلابك | منصتك التعليمية المتكاملة للمدرسين والأكاديميات</title>
+    <meta name="description" content="منصة طلابك هي الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الدورات التعليمية، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور وتزيد من مبيعاتك.">
+    <meta name="keywords" content="منصة طلابك, طلابك, منصة تعليمية, إدارة المدرسين, إدارة الطلاب, تنظيم الدورات, تسويق للمعلمين, موقع مدرس, إنشاء موقع تعليمي">
+    <meta name="author" content="منصة طلابك">
+    <link rel="canonical" href="https://talabk-phi.vercel.app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://talabk-phi.vercel.app/">
+    <meta property="og:title" content="منصة طلابك | منصتك التعليمية المتكاملة للمدرسين والأكاديميات">
+    <meta property="og:description" content="منصة طلابك هي الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الدورات التعليمية، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور وتزيد من مبيعاتك.">
+    <meta property="og:image" content="https://talabk-phi.vercel.app/og-image.png">
+    <meta property="og:site_name" content="منصة طلابك">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://talabk-phi.vercel.app/">
+    <meta property="twitter:title" content="منصة طلابك | منصتك التعليمية المتكاملة للمدرسين والأكاديميات">
+    <meta property="twitter:description" content="منصة طلابك هي الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الدورات التعليمية، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور وتزيد من مبيعاتك.">
+    <meta property="twitter:image" content="https://talabk-phi.vercel.app/og-image.png">
+    
+    <!-- Favicon and Theme Color -->
+    <meta name="theme-color" content="#1a202c">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "منصة طلابك",
+      "alternateName": "طلابك",
+      "url": "https://talabk-phi.vercel.app/",
+      "description": "الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الدورات التعليمية، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://talabk-phi.vercel.app/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "منصة طلابك",
+      "url": "https://talabk-phi.vercel.app/",
+      "logo": "https://talabk-phi.vercel.app/og-image.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+201550527744",
+        "contactType": "customer service",
+        "areaServed": "EG",
+        "availableLanguage": ["Arabic", "English"]
+      },
+      "sameAs": [
+        "https://wa.me/201550527744"
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo"><span>طلابك</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#features" data-i18n="nav_features">المميزات</a></li>
+                    <li><a href="#languages" data-i18n="nav_languages">اللغات</a></li>
+                    <li><a href="#pricing" data-i18n="nav_pricing">الأسعار</a></li>
+                    <li><a href="#portfolio" data-i18n="nav_portfolio">أعمالنا</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <select id="language-select" class="lang-select" aria-label="اختر اللغة">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                </select>
+                <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://wa.me/201550527744" class="btn btn-primary nav-cta"><i class="fab fa-whatsapp"></i> <span data-i18n="contact_us">تواصل معنا</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="fade-up"><span data-i18n="hero_title_1">ارتقِ بخدماتك التعليمية مع</span> <span>طلابك</span></h1>
+                <p class="fade-up delay-1" data-i18n="hero_desc">الحل الأمثل للمدرسين والأكاديميات لزيادة عدد الطلاب، تنظيم الكورسات، وعرض خبراتك بطريقة احترافية تجذب أولياء الأمور.</p>
+                <div class="hero-buttons fade-up delay-2">
+                    <a href="https://wa.me/201550527744" class="btn btn-primary btn-large"><i class="fab fa-whatsapp"></i> <span data-i18n="start_now">ابدأ الآن</span></a>
+                    <a href="#features" class="btn btn-outline btn-large" data-i18n="discover_more">اكتشف المزيد</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in delay-3">
+                <div class="glass-card mockup">
+                    <div class="mockup-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-bar w-70"></div>
+                        <div class="mockup-bar w-50"></div>
+                        <div class="mockup-bar w-90"></div>
+                        <div class="mockup-grid">
+                            <div class="mockup-box"></div>
+                            <div class="mockup-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title text-center fade-up">
+                <h2 data-i18n="features_title">لماذا تختار منصة طلابك؟</h2>
+                <p data-i18n="features_subtitle">صُممت لتلبي احتياجات المعلمين والأكاديميات بخدمات راقية (High-Ticket)</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-up">
+                    <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3 data-i18n="feat_teachers">للمدرسين</h3>
+                    <p data-i18n="feat_teachers_desc">اعرض خبراتك بطريقة احترافية، قم بزيادة عدد طلابك بسهولة، وتواصل مع أولياء الأمور بثقة وفعالية لتعزيز مكانتك التعليمية.</p>
+                </div>
+                <div class="feature-card fade-up delay-1">
+                    <div class="feature-icon"><i class="fas fa-university"></i></div>
+                    <h3 data-i18n="feat_academies">للأكاديميات</h3>
+                    <p data-i18n="feat_academies_desc">نظم كورساتك وإدارة المدرسين والطلاب في مكان واحد بطريقة احترافية ومؤتمتة ترفع من كفاءة العمل وتوفر الوقت.</p>
+                </div>
+                <div class="feature-card fade-up delay-2">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 data-i18n="feat_advantages">مزايا استثنائية</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_1">زيادة عدد الطلاب بسهولة</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_2">تنظيم العمل والكورسات</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_3">عرض احترافي يجذب العملاء</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="adv_4">حل مشاكل التواصل التقليدية</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages" id="languages">
+        <div class="container">
+            <div class="languages-content fade-up">
+                <h2 data-i18n="lang_title">دعم متعدد اللغات لجمهور عالمي</h2>
+                <p data-i18n="lang_desc">نحن نقوم ببناء مواقع تدعم لغات متعددة لتتمكن من استهداف الطلاب وأولياء الأمور من مختلف أنحاء العالم. نقوم بالبرمجة والتصميم باللغات التالية:</p>
+                <div class="lang-tags">
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_ar">العربية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_en">الإنجليزية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_es">الإسبانية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_fr">الفرنسية</span></span>
+                    <span class="lang-tag"><i class="fas fa-globe"></i> <span data-i18n="lang_de">الألمانية</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title text-center fade-up">
+                <h2 data-i18n="pricing_title">باقات الأسعار</h2>
+                <p data-i18n="pricing_desc">اختر الباقة المناسبة لاحتياجاتك وابدأ في تطوير عملك التعليمي</p>
+            </div>
+
+            <!-- Currency Switcher -->
+            <div class="currency-switcher-container fade-up delay-1">
+                <button class="currency-btn active" data-currency="EGP">EGP</button>
+                <button class="currency-btn" data-currency="SAR">SAR</button>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Starter Package -->
+                <div class="pricing-card fade-up">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pkg_starter">موقع مدرس مستقل</h3>
+                        <p data-i18n="pkg_starter_desc">للبداية السريعة والاحترافية</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_starter_1">موقع عبارة عن لاندنج بيج واحدة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_starter_2">تصميم منظم ومحترم</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_starter_3">تدعم لغة واحدة فقط</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_starter_4">زر تواصل مباشر عبر واتساب</span></li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span data-i18n="price_starts_from">تبدأ من</span>
+                        <h4><span class="price-val" data-package="starter">1000</span> <span class="price-currency" data-i18n="currency">ج.م</span></h4>
+                    </div>
+                    <button class="btn btn-outline pricing-btn start-project-btn" data-package="Starter" data-i18n="start_project">ابدأ مشروعك</button>
+                </div>
+
+                <!-- Pro Package -->
+                <div class="pricing-card popular fade-up delay-1">
+                    <div class="popular-badge" data-i18n="most_requested">الأكثر طلباً</div>
+                    <div class="pricing-header">
+                        <h3 data-i18n="pkg_pro">Portfolio مدرس محترف</h3>
+                        <p data-i18n="pkg_pro_desc">للمحترفين والنمو المستمر</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_pro_1">موقع كامل ومنظم بطريقة احترافية</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_pro_2">إضافة صفحات التواصل الاجتماعي</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_pro_3">دعم لغتين أو ثلاثة على حسب الطلب</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_pro_4">دعم كامل لمدة شهر مجاناً</span></li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span data-i18n="price_starts_from">تبدأ من</span>
+                        <h4><span class="price-val" data-package="pro">2000</span> <span class="price-currency" data-i18n="currency">ج.م</span></h4>
+                    </div>
+                    <button class="btn btn-primary pricing-btn start-project-btn" data-package="Pro" data-i18n="start_project">ابدأ مشروعك</button>
+                </div>
+
+                <!-- Academy Package -->
+                <div class="pricing-card fade-up delay-2">
+                    <div class="pricing-header">
+                        <h3 data-i18n="pkg_academy">Academy</h3>
+                        <p data-i18n="pkg_academy_desc">للأكاديميات والمؤسسات الكبيرة</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_academy_1">أكاديمية احترافية متكاملة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_academy_2">عدد صفحات غير محدود</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_academy_3">دعم 5 لغات مختلفة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_academy_4">لوحة تحكم للمشرف لتعديل أي حاجة براحته</span></li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span data-i18n="price_starts_from">تبدأ من</span>
+                        <h4><span class="price-val" data-package="academy">5000</span> <span class="price-currency" data-i18n="currency">ج.م</span></h4>
+                    </div>
+                    <button class="btn btn-outline pricing-btn start-project-btn" data-package="Academy" data-i18n="start_project">ابدأ مشروعك</button>
+                </div>
+            </div>
+
+            <!-- Custom Package -->
+            <div class="pricing-custom fade-up delay-3">
+                <div class="pricing-custom-content">
+                    <div class="pricing-custom-info">
+                        <h3 data-i18n="pkg_custom">باقة الموقع الخاص</h3>
+                        <p data-i18n="pkg_custom_desc">للأشخاص الذين يرغبون في موقع بطريقة مختلفة أو بأسلوب يشبه أكاديمية خاصة أو مدرس معين.</p>
+                        <p class="pricing-custom-note"><strong data-i18n="price_label">السعر:</strong> <span data-i18n="pkg_custom_price">مفتوح ويختلف على حسب نوع الموقع الذي يطلبه العميل.</span></p>
+                    </div>
+                    <div class="pricing-custom-action">
+                        <button class="btn btn-primary start-project-btn" data-package="Custom" data-i18n="start_project">ابدأ مشروعك</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Disclaimer Note -->
+            <div class="pricing-disclaimer fade-up text-center delay-3">
+                <p><i class="fas fa-info-circle"></i> <span data-i18n="pricing_disclaimer">ملاحظة: سعر أي باقة لا يشمل الاستضافة (الهوست) أو الدومين</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Case Studies) -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title text-center fade-up">
+                <h2 data-i18n="port_title">قصص نجاح عملائنا</h2>
+                <p data-i18n="port_desc">شاهد كيف ساعدنا المدرسين والأكاديميات في تحقيق أهدافهم</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Case Study 1 -->
+                <div class="portfolio-card fade-up">
+                    <div class="portfolio-header">
+                        <h3>om salma cv</h3>
+                        <a href="https://ghada1.vercel.app/" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="portfolio-body">
+                        <div class="case-item">
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case1_challenge">صعوبة شديدة في عرض الخبرة الكبيرة لأولياء أمور بلغة أجنبية (الألمانية)</p>
+                        </div>
+                        <div class="case-item">
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case1_solution">موقع احترافي ومنظم يدعم ثلاث لغات مختلفة وهي الألمانية والإنجليزية والعربية</p>
+                        </div>
+                        <div class="case-item success">
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case1_result">زيادة الثقة من أولياء الأمور وسهولة التواصل مع الطلاب</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="portfolio-card fade-up delay-1">
+                    <div class="portfolio-header">
+                        <h3>AL shaimaa</h3>
+                        <a href="https://shaimaa-cv.vercel.app/" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="portfolio-body">
+                        <div class="case-item">
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case2_challenge">صعوبة في عرض الخبرة الكبيرة والوصول لأكاديميات كبيرة رغم وجود الخبرة المطلوبة</p>
+                        </div>
+                        <div class="case-item">
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case2_solution">موقع متكامل لعرض الخبرة الكبيرة للمعلمة وتصميم احترافي ومميز</p>
+                        </div>
+                        <div class="case-item success">
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case2_result">زيادة ملحوظة في فرص الوصول لأكاديميات عالية وزيادة الثقة من أولياء الأمور</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="portfolio-card fade-up delay-2">
+                    <div class="portfolio-header">
+                        <h3>أكاديمية وتزودوا</h3>
+                        <a href="https://watazawadoo.vercel.app/" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="portfolio-body">
+                        <div class="case-item">
+                            <h4><i class="fas fa-exclamation-triangle"></i> <span data-i18n="challenge">التحدي:</span></h4>
+                            <p data-i18n="case3_challenge">تشتت في إدارة الكورسات وعدم وجود منصة موحدة للطلاب والمعلمين</p>
+                        </div>
+                        <div class="case-item">
+                            <h4><i class="fas fa-lightbulb"></i> <span data-i18n="solution">الحل:</span></h4>
+                            <p data-i18n="case3_solution">بناء منصة أكاديمية شاملة ومنظمة لعرض الكورسات وتسهيل الانضمام</p>
+                        </div>
+                        <div class="case-item success">
+                            <h4><i class="fas fa-star"></i> <span data-i18n="result">النتيجة:</span></h4>
+                            <p data-i18n="case3_result">تنظيم احترافي للمحتوى التعليمي وتجربة مستخدم ممتازة زادت من معدلات التسجيل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center fade-up">
+            <h2 data-i18n="cta_title">هل أنت مستعد لتطوير عملك التعليمي؟</h2>
+            <p data-i18n="cta_desc">انضم إلى نخبة المدرسين والأكاديميات الذين حققوا نقلة نوعية في أعمالهم معنا.</p>
+            <a href="https://wa.me/201550527744" class="btn btn-primary btn-large pulse-animation">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">تواصل معنا الآن</span>
+                <br>
+                <small dir="ltr">01550527744</small>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2>طلابك</h2>
+                <p data-i18n="footer_desc">الحل الكامل لنجاحك أونلاين</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/201550527744"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 طلابك. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+
+    <!-- Project Setup Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card">
+            <!-- Close Button -->
+            <button id="modal-close" class="modal-close-btn" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 data-i18n="modal_title">ابدأ مشروعك التعليمي</h3>
+                <p><span data-i18n="modal_pkg_prefix">الباقة المختارة:</span> <span id="selected-package-name" class="pkg-badge">Pro</span></p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="form-progress"></div>
+                <div class="progress-text">
+                    <span data-i18n="step_label">الخطوة</span> <span id="current-step-num">1</span> <span data-i18n="step_of">من</span> 8
+                </div>
+            </div>
+
+            <!-- Form Element -->
+            <form id="project-wizard-form" onsubmit="event.preventDefault();">
+                <!-- Step 1: Quick Details -->
+                <div class="form-step active" data-step="1">
+                    <h4 class="step-title"><span class="step-num-circle">1</span> <span data-i18n="step1_title">البيانات السريعة</span></h4>
+                    <div class="form-group">
+                        <label for="client-name" data-i18n="label_name">الاسم كامل *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="client-name" required placeholder="أدخل اسمك الكريم">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-phone" data-i18n="label_phone">رقم واتساب *</label>
+                        <div class="input-wrapper">
+                            <i class="fab fa-whatsapp"></i>
+                            <input type="tel" id="client-phone" required placeholder="مثال: 01550527744">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-country" data-i18n="label_country">الدولة *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-globe-americas"></i>
+                            <input type="text" id="client-country" required placeholder="مثال: مصر">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Project Type -->
+                <div class="form-step" data-step="2">
+                    <h4 class="step-title"><span class="step-num-circle">2</span> <span data-i18n="step2_title">نوع المشروع</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="مدرس" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span data-i18n="opt_teacher">مدرس</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="أكاديمية">
+                            <div class="option-card-content">
+                                <i class="fas fa-university"></i>
+                                <span data-i18n="opt_academy">أكاديمية</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-type" value="كورس أونلاين">
+                            <div class="option-card-content">
+                                <i class="fas fa-laptop-code"></i>
+                                <span data-i18n="opt_online_course">كورس أونلاين</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 3: Project Info -->
+                <div class="form-step" data-step="3">
+                    <h4 class="step-title"><span class="step-num-circle">3</span> <span data-i18n="step3_title">معلومات المشروع</span></h4>
+                    <div class="form-group">
+                        <label for="brand-name" data-i18n="label_brand">اسم الأكاديمية / البراند *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-signature"></i>
+                            <input type="text" id="brand-name" required placeholder="مثال: أكاديمية التميز">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-offers" data-i18n="label_offers">بتقدم إيه؟ (مواد / كورسات) *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-book-open"></i>
+                            <input type="text" id="brand-offers" required placeholder="مثال: كورسات لغات، رياضيات للمرحلة الثانوية">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-link" data-i18n="label_link">عندك صفحة أو موقع حالي؟ (لينك اختياري)</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-link"></i>
+                            <input type="url" id="brand-link" placeholder="https://example.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Goal -->
+                <div class="form-step" data-step="4">
+                    <h4 class="step-title"><span class="step-num-circle">4</span> <span data-i18n="step4_title">الهدف الرئيسي</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="أجيب طلاب" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-user-plus"></i>
+                                <span data-i18n="opt_get_students">أجيب طلاب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="أعرض الكورسات">
+                            <div class="option-card-content">
+                                <i class="fas fa-images"></i>
+                                <span data-i18n="opt_show_courses">أعرض الكورسات</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="project-goal" value="براند احترافي">
+                            <div class="option-card-content">
+                                <i class="fas fa-award"></i>
+                                <span data-i18n="opt_pro_brand">براند احترافي</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 5: What do you need in the website? -->
+                <div class="form-step" data-step="5">
+                    <h4 class="step-title"><span class="step-num-circle">5</span> <span data-i18n="step5_title">محتاج إيه في الموقع؟</span></h4>
+                    <p class="step-subtitle" data-i18n="step5_subtitle">يمكنك اختيار أكثر من خيار</p>
+                    <div class="options-grid checkboxes-grid">
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="صفحة كورسات">
+                            <div class="option-card-content">
+                                <i class="fas fa-list-ul"></i>
+                                <span data-i18n="opt_courses_page">صفحة كورسات</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="تسجيل طلاب">
+                            <div class="option-card-content">
+                                <i class="fas fa-user-check"></i>
+                                <span data-i18n="opt_student_reg">تسجيل طلاب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="دفع أونلاين">
+                            <div class="option-card-content">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-i18n="opt_online_pay">دفع أونلاين</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="واتساب">
+                            <div class="option-card-content">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-i18n="opt_whatsapp">واتساب</span>
+                            </div>
+                        </label>
+                        <label class="option-card-checkbox">
+                            <input type="checkbox" name="site-features" value="لوحة تحكم">
+                            <div class="option-card-content">
+                                <i class="fas fa-sliders-h"></i>
+                                <span data-i18n="opt_dashboard">لوحة تحكم</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 6: Start/Upgrade package -->
+                <div class="form-step" data-step="6">
+                    <h4 class="step-title"><span class="step-num-circle">6</span> <span data-i18n="step6_title">تحب تبدأ بنفس الباقة ولا تطورها حسب احتياجك؟</span></h4>
+                    <div class="options-grid vertical-grid">
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="نفس الباقة" checked>
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-check-double"></i>
+                                <div>
+                                    <h5 data-i18n="opt_same_pkg">نفس الباقة</h5>
+                                    <p data-i18n="opt_same_pkg_desc">البدء بالميزات المذكورة في الباقة مباشرة</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="تطوير بسيط">
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <h5 data-i18n="opt_minor_upgrade">تطوير بسيط</h5>
+                                    <p data-i18n="opt_minor_upgrade_desc">إضافة لمسات خاصة وبعض التعديلات المحددة</p>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card-radio-horizontal">
+                            <input type="radio" name="package-upgrade" value="تطوير كامل">
+                            <div class="option-card-content-horizontal">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h5 data-i18n="opt_full_upgrade">تطوير كامل</h5>
+                                    <p data-i18n="opt_full_upgrade_desc">بناء ميزات مخصصة إضافية بالكامل لتناسب عملك</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 7: Coupon Code -->
+                <div class="form-step" data-step="7">
+                    <h4 class="step-title"><span class="step-num-circle">7</span> <span data-i18n="step7_title">هل لديك كوبون؟</span></h4>
+                    <p class="step-subtitle" data-i18n="step7_subtitle">إذا كان لديك كود كوبون خصم، اكتبه هنا. إذا لم يكن لديك، يمكنك الاستمرار وتخطي هذا السؤال.</p>
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label for="coupon-code" data-i18n="label_coupon">كوبون الخصم (اختياري)</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-ticket-alt"></i>
+                            <input type="text" id="coupon-code" placeholder="أدخل الكوبون هنا">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8: Execution Time -->
+                <div class="form-step" data-step="8">
+                    <h4 class="step-title"><span class="step-num-circle">8</span> <span data-i18n="step8_title">وقت التنفيذ المناسب لك</span></h4>
+                    <div class="options-grid">
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="عايزه فورًا" checked>
+                            <div class="option-card-content">
+                                <i class="fas fa-bolt"></i>
+                                <span data-i18n="opt_now">عايزه فورًا</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="خلال أسبوع">
+                            <div class="option-card-content">
+                                <i class="fas fa-calendar-week"></i>
+                                <span data-i18n="opt_week">خلال أسبوع</span>
+                            </div>
+                        </label>
+                        <label class="option-card-radio">
+                            <input type="radio" name="execution-time" value="لسه بفكر">
+                            <div class="option-card-content">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span data-i18n="opt_thinking">لسه بفكر</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="modal-footer">
+                    <button type="button" id="prev-btn" class="btn btn-outline" style="display: none;" data-i18n="btn_prev">السابق</button>
+                    <button type="button" id="next-btn" class="btn btn-primary" data-i18n="btn_next">التالي</button>
+                    <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp pulse-animation" style="display: none;">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="btn_whatsapp">كمل على واتساب</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
